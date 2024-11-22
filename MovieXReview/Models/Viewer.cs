@@ -16,4 +16,16 @@ namespace MovieXReview.Models
         //A viewer has many tickets
         public ICollection<Ticket>? Tickets { get; set; }
     }
+
+    public class ViewerDto
+    {
+        public int ViewerId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string? Identity { get; set; }
+        public string? Membership { get; set; }
+        public int? Age { get; set; }
+    }
+
+
 }
