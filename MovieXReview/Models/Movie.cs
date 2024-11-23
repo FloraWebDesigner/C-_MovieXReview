@@ -16,13 +16,18 @@ namespace MovieXReview.Models
         public string? Star { get; set; }
         public int? TicketQuantity { get; set; }
 
-        //A movie has many reviews
+        //A movie can have many reviews
         public ICollection<Review>? Reviews { get; set; }
 
-        //A movie releases many tickets
+        //A movie can have many tickets
         public ICollection<Ticket>? Tickets { get; set; }
 
 
+        //A project can have many tags (Many to Many relationship)
+        public ICollection<Tag>? Tags { get; set; }
+
+        //A movie can have many reviews
+        public ICollection<Review>? Review { get; set; }
     }
 
     public class MovieDto
@@ -47,5 +52,7 @@ namespace MovieXReview.Models
         public bool HasPic { get; set; }
 
         public string? MovieImgPath { get; set; }
+
+        public IEnumerable<TagDto>? Tags { get; set; }
     }
 }

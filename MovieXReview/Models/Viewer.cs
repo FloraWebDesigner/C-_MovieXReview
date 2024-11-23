@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.CodeAnalysis;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieXReview.Models
@@ -15,6 +16,9 @@ namespace MovieXReview.Models
 
         //A viewer has many tickets
         public ICollection<Ticket>? Tickets { get; set; }
+
+        //A viewer can have many reviews
+        public ICollection<Review>? Review { get; set; }
     }
 
     public class ViewerDto
