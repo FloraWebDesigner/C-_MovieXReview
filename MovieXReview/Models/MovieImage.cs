@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace MovieXReview.Models
 {
-    public class Image
+    public class MovieImage
     {
         [Key]
         public int ImageId { get; set; }

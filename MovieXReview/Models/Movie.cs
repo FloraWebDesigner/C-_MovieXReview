@@ -22,12 +22,12 @@ namespace MovieXReview.Models
         //A movie can have many tickets
         public ICollection<Ticket>? Tickets { get; set; }
 
+        //A Movie can have many images
+        public ICollection<MovieImage>? Images { get; set; }
 
         //A project can have many tags (Many to Many relationship)
         public ICollection<Tag>? Tags { get; set; }
 
-        //A movie can have many reviews
-        public ICollection<Review>? Review { get; set; }
     }
 
     public class MovieDto

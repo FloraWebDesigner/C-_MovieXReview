@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace MovieXReview.Data.Migrations
+namespace MovieXReview.Migrations
 {
     /// <inheritdoc />
-    public partial class movie : Migration
+    public partial class FIRSTMIGRATION : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
