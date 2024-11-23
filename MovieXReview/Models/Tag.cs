@@ -12,7 +12,7 @@ namespace MovieXReview.Models
         public required string TagColor { get; set; }
 
         // Many-to-many relationship with Movie through TagMovie
-        public ICollection<Movie>? Movie { get; set; }
+        public ICollection<Movie>? Movies { get; set; }
     }
     public class TagDto
     {

@@ -9,11 +9,11 @@ using MovieXReview.Data;
 
 #nullable disable
 
-namespace MovieXReview.Data.Migrations
+namespace MovieXReview.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241121232005_ticket")]
-    partial class ticket
+    [Migration("20241123234203_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -227,30 +227,19 @@ namespace MovieXReview.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("MovieXReview.Models.Image", b =>
+            modelBuilder.Entity("MovieTag", b =>
                 {
-                    b.Property<int>("ImageID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("MoviesMovieId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageID"));
+                    b.Property<int>("TagsTagId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("MoviesMovieId", "TagsTagId");
 
-                    b.Property<bool>("HasPic")
-                        .HasColumnType("bit");
+                    b.HasIndex("TagsTagId");
 
-                    b.Property<string>("PicExtension")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("UploadedAt")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("ImageID");
-
-                    b.ToTable("Image");
+                    b.ToTable("MovieTag");
                 });
 
             modelBuilder.Entity("MovieXReview.Models.Movie", b =>
@@ -288,7 +277,38 @@ namespace MovieXReview.Data.Migrations
 
                     b.HasKey("MovieId");
 
-                    b.ToTable("Movie");
+                    b.ToTable("Movies");
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.MovieImage", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"));
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("HasPic")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PicExtension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UploadedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("ImageId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("MovieXReview.Models.Review", b =>
@@ -305,6 +325,9 @@ namespace MovieXReview.Data.Migrations
                     b.Property<int>("ImageTotal")
                         .HasColumnType("int");
 
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<float>("Rate")
                         .HasColumnType("real");
 
@@ -316,18 +339,25 @@ namespace MovieXReview.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ViewerId")
+                        .HasColumnType("int");
+
                     b.HasKey("ReviewId");
 
-                    b.ToTable("Review");
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("ViewerId");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("MovieXReview.Models.Tag", b =>
                 {
-                    b.Property<int>("TagID")
+                    b.Property<int>("TagId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TagID"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TagId"));
 
                     b.Property<string>("TagColor")
                         .IsRequired()
@@ -337,9 +367,9 @@ namespace MovieXReview.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("TagID");
+                    b.HasKey("TagId");
 
-                    b.ToTable("Tag");
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("MovieXReview.Models.Ticket", b =>
@@ -350,12 +380,52 @@ namespace MovieXReview.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketId"));
 
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<int>("TicketNo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ViewerId")
                         .HasColumnType("int");
 
                     b.HasKey("TicketId");
 
-                    b.ToTable("Ticket");
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("ViewerId");
+
+                    b.ToTable("Tickets");
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.Viewer", b =>
+                {
+                    b.Property<int>("ViewerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ViewerId"));
+
+                    b.Property<int?>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Identity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Membership")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ViewerId");
+
+                    b.ToTable("Viewers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -407,6 +477,82 @@ namespace MovieXReview.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MovieTag", b =>
+                {
+                    b.HasOne("MovieXReview.Models.Movie", null)
+                        .WithMany()
+                        .HasForeignKey("MoviesMovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MovieXReview.Models.Tag", null)
+                        .WithMany()
+                        .HasForeignKey("TagsTagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.MovieImage", b =>
+                {
+                    b.HasOne("MovieXReview.Models.Movie", "Movie")
+                        .WithMany("Images")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.Review", b =>
+                {
+                    b.HasOne("MovieXReview.Models.Movie", "Movie")
+                        .WithMany("Reviews")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MovieXReview.Models.Viewer", null)
+                        .WithMany("Review")
+                        .HasForeignKey("ViewerId");
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.Ticket", b =>
+                {
+                    b.HasOne("MovieXReview.Models.Movie", "Movie")
+                        .WithMany("Tickets")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MovieXReview.Models.Viewer", "Viewer")
+                        .WithMany("Tickets")
+                        .HasForeignKey("ViewerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("Viewer");
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.Movie", b =>
+                {
+                    b.Navigation("Images");
+
+                    b.Navigation("Reviews");
+
+                    b.Navigation("Tickets");
+                });
+
+            modelBuilder.Entity("MovieXReview.Models.Viewer", b =>
+                {
+                    b.Navigation("Review");
+
+                    b.Navigation("Tickets");
                 });
 #pragma warning restore 612, 618
         }
