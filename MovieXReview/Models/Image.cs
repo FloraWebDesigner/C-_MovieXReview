@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.CodeAnalysis;
+using System.ComponentModel.DataAnnotations;
 namespace MovieXReview.Models
 {
     public class Image
     {
         [Key]
-        public int ImageID { get; set; }
+        public int ImageId { get; set; }
         public DateTime UploadedAt { get; set; }
 
         public required string FileName { get; set; }
@@ -12,6 +13,23 @@ namespace MovieXReview.Models
         public bool HasPic { get; set; } = false;
 
         // images stored in /wwwroot/images/projects/{ImageId}.{PicExtension}
+        public string? PicExtension { get; set; }
+
+        //An image belongs to one movie
+        public required virtual Movie Movie { get; set; }
+        public int MovieId { get; set; }
+    }
+
+    public class ImagesDto
+    {
+        public int ImageId { get; set; }
+        public DateTime UploadedAt { get; set; }
+
+        public required string FileName { get; set; }
+        public int MovieId { get; set; }
+
+        public string? MovieName { get; set; }
+        public bool HasPic { get; set; }
         public string? PicExtension { get; set; }
     }
 }

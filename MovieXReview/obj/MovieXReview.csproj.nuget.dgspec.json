@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\flora\\source\\repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj": {}
+    "C:\\Users\\OWNER\\Source\\Repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj": {}
   },
   "projects": {
-    "C:\\Users\\flora\\source\\repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj": {
+    "C:\\Users\\OWNER\\Source\\Repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\flora\\source\\repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj",
+        "projectUniqueName": "C:\\Users\\OWNER\\Source\\Repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj",
         "projectName": "MovieXReview",
-        "projectPath": "C:\\Users\\flora\\source\\repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj",
-        "packagesPath": "C:\\Users\\flora\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\flora\\source\\repos\\C-_MovieXReview\\MovieXReview\\obj\\",
+        "projectPath": "C:\\Users\\OWNER\\Source\\Repos\\C-_MovieXReview\\MovieXReview\\MovieXReview.csproj",
+        "packagesPath": "C:\\Users\\OWNER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\OWNER\\Source\\Repos\\C-_MovieXReview\\MovieXReview\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\flora\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\OWNER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
