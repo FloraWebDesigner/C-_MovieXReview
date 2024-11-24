@@ -108,7 +108,7 @@ namespace MovieXReview.Service
 
         }
 
-        // Lists all projects associated with a tag by ID, Includes project details + uploader info
+        // Lists all movies associated with a tag by ID, Includes movie details + uploader info
         public async Task<IEnumerable<MovieDto>> ListMoviesForTag(int id)
         {
             var tag = await _context.Tags
@@ -120,7 +120,7 @@ namespace MovieXReview.Service
                 return new List<MovieDto>();
             }
 
-            // Map projects to ProjectDto
+            // Map movies to MovieDto
             var movies = tag.Movies.Select(movie => new MovieDto
             {
                 MovieId = movie.MovieId,

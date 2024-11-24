@@ -208,14 +208,14 @@ namespace MovieXReview.Controllers
         /// GET: api/Tag/ListMoviesForTag/4 -> [{MovieDto},{MovieDto},..]
         /// </example>
         /// 
-        [HttpGet(template: "ListProjectsForTag/{id}")]
-        public async Task<ActionResult<IEnumerable<MovieDto>>> ListProjectsForTag(int id)
+        [HttpGet(template: "ListMoviesForTag/{id}")]
+        public async Task<ActionResult<IEnumerable<MovieDto>>> ListMoviesForTag(int id)
         {
             var movies = await _tagsService.ListMoviesForTag(id);
 
             if (movies == null || !movies.Any())
             {
-                return NotFound($"No projects found.");
+                return NotFound($"No movies found.");
             }
 
             return Ok(movies);

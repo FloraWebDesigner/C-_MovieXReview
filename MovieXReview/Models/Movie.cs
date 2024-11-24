@@ -25,7 +25,7 @@ namespace MovieXReview.Models
         //A Movie can have many images
         public ICollection<MovieImage>? Images { get; set; }
 
-        //A project can have many tags (Many to Many relationship)
+        //A movie can have many tags (Many to Many relationship)
         public ICollection<Tag>? Tags { get; set; }
 
     }

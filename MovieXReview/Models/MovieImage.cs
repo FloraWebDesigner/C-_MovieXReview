@@ -12,7 +12,7 @@ namespace MovieXReview.Models
 
         public bool HasPic { get; set; } = false;
 
-        // images stored in /wwwroot/images/projects/{ImageId}.{PicExtension}
+        // images stored in /wwwroot/images/movies/{ImageId}.{PicExtension}
         public string? PicExtension { get; set; }
 
         //An image belongs to one movie
