@@ -4,9 +4,6 @@ using MovieXReview.Interface;
 using MovieXReview.Models.ViewModels;
 using MovieXReview.Models;
 using Microsoft.AspNetCore.Authorization;
-using MovieXReview.Interface;
-using MovieXReview.Models.ViewModels;
-using MovieXReview.Models;
 
 namespace MovieXReview.Controllers.Mvc
 {

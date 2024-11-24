@@ -5,12 +5,9 @@ using MovieXReview.Models.ViewModels;
 using MovieXReview.Services;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
-using MovieXReview.Interface;
-using MovieXReview.Models;
 
 namespace MovieXReview.Controllers
 {
-
     public class MoviePageController : Controller
     {
         private readonly MovieInterface _MovieService;
@@ -24,7 +21,6 @@ namespace MovieXReview.Controllers
             _ViewerService = ViewerService;
             _TicketService = TicketService;
         }
-
         public IActionResult Index()
         {
             return RedirectToAction("List");
@@ -42,7 +38,6 @@ namespace MovieXReview.Controllers
         public async Task<IActionResult> Details(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
-
 
             if (MovieDto == null)
             {
