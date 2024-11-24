@@ -308,6 +308,96 @@ namespace MovieXReview.Controllers
         }
 
 
+        //ListMoviesForTag
+        [HttpGet(template: "ListForTag/{id}")]
+        [Authorize]
+        public async Task<IActionResult> ListMoviesForTag(int id)
+        {
+            // empty list of data transfer object ViewerDto
+            IEnumerable<MovieDto> MovieDtos = await _MovieService.ListMoviesForTag(id);
+            // return 200 OK with ViewerDtos
+            return Ok(MovieDtos);
+        }
+
+
+        /// <summary>
+        /// Unlinks a movie from a tag
+        /// </summary>
+        /// <param name="id">The id of the movie</param>
+        /// <param name="id">The id of the tag</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 302 Redirect (/Identity/Account/Login)
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// Delete: api/Movie/Unlink?MovieId=1&TagId=2
+        /// Headers: cookie: .AspNetCore.Identity.Application={token}
+        /// ->
+        /// Response Code: 204 No Content
+        /// </example>
+        [HttpDelete("Unlink")]
+        [Authorize(Roles = "admin")]
+        public async Task<ActionResult> Unlink(int MovieId, int TagId)
+        {
+            ServiceResponse response = await _MovieService.UnlinkMovieFromTag(MovieId, TagId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound();
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return NoContent();
+
+        }
+
+        /// <summary>
+        /// Links a movie from a tag
+        /// </summary>
+        /// <param name="id">The id of the movie</param>
+        /// <param name="id">The id of the tag</param>
+        /// <returns>
+        /// 204 No Content
+        /// or
+        /// 302 Redirect (/Identity/Account/Login)
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// Post: api/Movie/Link?MovieId1&TagId=2
+        /// Headers: cookie: .AspNetCore.Identity.Application={token}
+        /// ->
+        /// Response Code: 204 No Content
+        /// </example>
+        [HttpPost("Link")]
+        [Authorize(Roles = "admin")]
+        public async Task<ActionResult> Link(int MovieId, int TagId)
+        {
+            ServiceResponse response = await _MovieService.LinkMovieToTag(MovieId, TagId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound();
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return NoContent();
+
+        }
+
+
+
+
+
 
         /// <summary>
         /// Receives a product picture and saves it to /wwwroot/img/movies/{id}{extension}

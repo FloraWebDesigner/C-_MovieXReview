@@ -55,14 +55,8 @@ namespace MovieXReview.Services
                 //{
                 //    MovieDto.MovieImgPath = $"/img/movies/{Movie.MovieId}{Movie.PicExtension}";
                 //}
-
-
-
                 MovieDtos.Add(MovieDto);
             }
-
-
-
             return MovieDtos;
         }
 
@@ -120,7 +114,6 @@ namespace MovieXReview.Services
 
             Movie? Movie = await _context.Movies.FindAsync(MovieDto.MovieId);
 
-
             if (Movie == null)
             {
                 serviceResponse.Messages.Add("Movie could not be found");
@@ -137,7 +130,6 @@ namespace MovieXReview.Services
             Movie.Director = (string)MovieDto.Director;
             Movie.Star = (string)MovieDto.Star;
             Movie.TicketQuantity = (int)MovieDto.TicketQuantity;
-
 
             //// flags that the object has changed
             //_context.Entry(Movie).State = EntityState.Modified;
@@ -200,7 +192,6 @@ namespace MovieXReview.Services
                 serviceResponse.Messages.Add("There was an error adding the Movie.");
                 serviceResponse.Messages.Add(ex.Message);
             }
-
 
             serviceResponse.Status = ServiceResponse.ServiceStatus.Created;
             serviceResponse.CreatedId = Movie.MovieId;
@@ -290,6 +281,120 @@ namespace MovieXReview.Services
             // return 200 OK with MovieDtos
             return MovieDtos;
         }
+
+
+
+        public async Task<IEnumerable<MovieDto>> ListMoviesForTag(int id)
+        {
+            List<Movie> Movies = await _context.Movies
+                .Where(m => m.Tags.Any(t => t.TagId == id))
+                .ToListAsync();
+
+            // empty list of data transfer object MovieDto
+            List<MovieDto> MovieDtos = new List<MovieDto>();
+
+            foreach (Movie Movie in Movies) {
+                
+                    // create new instance of MovieDto, add to list
+                    MovieDtos.Add(new MovieDto()
+                    {
+                        MovieId = Movie.MovieId,
+                        MovieName = Movie.MovieName,
+                        Year = (int)Movie.Year,
+                        Introduction = (string)Movie.Introduction,
+                        Rate = (float)Movie.Rate,
+                        Duration = (string)Movie.Duration,
+                        Director = (string)Movie.Director,
+                        Star = (string)Movie.Star,
+                        TicketQuantity = (int)Movie.TicketQuantity
+                    });
+                }
+                return MovieDtos;
+            }
+
+
+        public async Task<ServiceResponse> LinkMovieToTag(int MovieId, int TagId)
+        {
+            ServiceResponse serviceResponse = new();
+
+            Movie? movie = await _context.Movies
+                .Include(t => t.Tags)
+                .Where(m => m.MovieId == MovieId)
+                .FirstOrDefaultAsync();
+            Tag? tag = await _context.Tags.FindAsync(TagId);
+
+            // Data must link to a valid entity
+            if (tag == null || movie == null)
+            {
+                serviceResponse.Status = ServiceResponse.ServiceStatus.NotFound;
+                if (tag == null)
+                {
+                    serviceResponse.Messages.Add("Tag was not found. ");
+                }
+                if (movie == null)
+                {
+                    serviceResponse.Messages.Add("Movie was not found.");
+                }
+                return serviceResponse;
+            }
+            try
+            {
+                movie.Tags.Add(tag);
+                _context.SaveChanges();
+            }
+            catch (Exception Ex)
+            {
+                serviceResponse.Messages.Add("There was an issue linking the tag to the movie");
+                serviceResponse.Messages.Add(Ex.Message);
+            }
+
+
+            serviceResponse.Status = ServiceResponse.ServiceStatus.Created;
+            return serviceResponse;
+        }
+
+        public async Task<ServiceResponse> UnlinkMovieFromTag(int MovieId, int TagId)
+        {
+            ServiceResponse serviceResponse = new();
+
+            Movie? movie = await _context.Movies
+                .Include(t => t.Tags)
+                .Where(m => m.MovieId == MovieId)
+                .FirstOrDefaultAsync();
+            Tag? tag = await _context.Tags.FindAsync(TagId);
+
+            // Data must link to a valid entity
+            if (movie == null || tag == null)
+            {
+                serviceResponse.Status = ServiceResponse.ServiceStatus.NotFound;
+                if (movie == null)
+                {
+                    serviceResponse.Messages.Add("Movie was not found. ");
+                }
+                if (tag == null)
+                {
+                    serviceResponse.Messages.Add("Tag was not found.");
+                }
+                return serviceResponse;
+            }
+            try
+            {
+                movie.Tags.Remove(tag);
+                _context.SaveChanges();
+            }
+            catch (Exception Ex)
+            {
+                serviceResponse.Messages.Add("There was an issue unlinking the movie to the tag");
+                serviceResponse.Messages.Add(Ex.Message);
+            }
+
+
+            serviceResponse.Status = ServiceResponse.ServiceStatus.Deleted;
+            return serviceResponse;
+        }
+
+
+
     }
 }
 

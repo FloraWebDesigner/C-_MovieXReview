@@ -18,6 +18,12 @@ namespace MovieXReview.Interface
 
         Task<IEnumerable<MovieDto>> ListMoviesForViewer(int id);
 
+        Task<IEnumerable<MovieDto>> ListMoviesForTag(int id);
+
+        Task<ServiceResponse> LinkMovieToTag(int MovieId, int TagId);
+
+        Task<ServiceResponse> UnlinkMovieFromTag(int MovieId, int TagId);
+
         //Task<ServiceResponse> UpdateMovieImg(int id, IFormFile MoviePic);
 
 
