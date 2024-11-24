@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MovieXReview")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0e24f0a69b8fca2c59a69576886bc6d26d011d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a87c99bb3f6378830b7c18c5668bae40edcca448")]
 [assembly: System.Reflection.AssemblyProductAttribute("MovieXReview")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MovieXReview")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
