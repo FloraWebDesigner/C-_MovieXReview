@@ -49,9 +49,9 @@ namespace MovieXReview.Models
         // add ticket available  - Oct 10
         public int TicketAvailable { get; set; }
 
-        public bool HasPic { get; set; }
+        // public bool HasPic { get; set; }
 
-        public string? MovieImgPath { get; set; }
+        // public string? MovieImgPath { get; set; }
 
         public IEnumerable<TagDto>? Tags { get; set; }
     }
