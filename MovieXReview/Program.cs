@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MovieXReview.Data;
+using MovieXReview.Interface;
+using MovieXReview.Service;
+using MovieXReview.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,16 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<MovieInterface, MovieService>();
+builder.Services.AddScoped<TicketInterface, TicketService>();
+builder.Services.AddScoped<ViewerInterface, ViewerService>();
+builder.Services.AddScoped<TagInterface, TagService>();
+builder.Services.AddScoped<MovieImageInterface, MovieImageService>();
+
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -34,6 +47,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllerRoute(
     name: "default",
