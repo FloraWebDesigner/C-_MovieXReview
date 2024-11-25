@@ -7,112 +7,16 @@
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\mvc\\movieimagepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\mvc\\moviepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\mvc\\moviepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\imagedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\imagedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\mvc\\reviewpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\mvc\\reviewpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\viewerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\viewerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\ticketnewfromviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\ticketnewfromviewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\ticketnewfrommovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\ticketnewfrommovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\ticketnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\ticketnew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\ticketedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\ticketedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\tagdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\tagdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\reviewdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\reviewdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\viewmodels\\moviedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\viewmodels\\moviedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\service\\viewerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\service\\viewerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\service\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\service\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\service\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\service\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\service\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\service\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\service\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\service\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\service\\movieimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\service\\movieimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\interface\\viewerinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\interface\\viewerinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\interface\\taginterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\interface\\taginterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\interface\\reviewinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\interface\\reviewinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\interface\\movieimageinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\interface\\movieimageinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\viewercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\viewercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\movieimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\movieimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\serviceresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,47 +35,12 @@
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\tag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\movieimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\movieimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\mvc\\ticketpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\mvc\\ticketpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\controllers\\mvc\\tagpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\controllers\\mvc\\tagpagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Tags.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Reviews.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Viewers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Movies.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Images.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Data\\Migrations\\20241125025857_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MovieXReview\\Data\\Migrations\\20241125025857_Update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|solutionrelative:moviexreview\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4542715-ABC0-4655-BFE0-3B8C39A424F7}|MovieXReview\\MovieXReview.csproj|c:\\users\\owner\\source\\repos\\c-_moviexreview\\moviexreview\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -231,34 +100,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 44,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ImageDetails.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\ImageDetails.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\ImageDetails.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\ImageDetails.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\ImageDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:44:13.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MoviePageController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\MoviePageController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\Mvc\\MoviePageController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\MoviePageController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\Mvc\\MoviePageController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:37:29.172Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -267,415 +110,14 @@
               "RelativeDocumentMoniker": "MovieXReview\\Controllers\\Mvc\\MovieImagePageController.cs",
               "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\MovieImagePageController.cs",
               "RelativeToolTip": "MovieXReview\\Controllers\\Mvc\\MovieImagePageController.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAgwCAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:36:40.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ViewerDetails.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\ViewerDetails.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\ViewerDetails.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\ViewerDetails.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\ViewerDetails.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:24:36.607Z",
+              "WhenOpened": "2024-11-25T07:51:17.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TicketNewFromViewer.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketNewFromViewer.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\TicketNewFromViewer.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketNewFromViewer.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\TicketNewFromViewer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:24:27.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TicketNewFromMovie.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketNewFromMovie.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\TicketNewFromMovie.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketNewFromMovie.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\TicketNewFromMovie.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:24:17.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TicketNew.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketNew.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\TicketNew.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketNew.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\TicketNew.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:24:09.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TicketEdit.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketEdit.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\TicketEdit.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TicketEdit.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\TicketEdit.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:24:00.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MovieDetails.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\MovieDetails.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\MovieDetails.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\MovieDetails.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\MovieDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:23:34.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ViewerService.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\ViewerService.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Service\\ViewerService.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\ViewerService.cs",
-              "RelativeToolTip": "MovieXReview\\Service\\ViewerService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:22:49.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ViewerInterface.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\ViewerInterface.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Interface\\ViewerInterface.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\ViewerInterface.cs",
-              "RelativeToolTip": "MovieXReview\\Interface\\ViewerInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T07:21:16.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ReviewDetails.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\ReviewDetails.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\ReviewDetails.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\ReviewDetails.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\ReviewDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T06:11:47.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReviewPageController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\ReviewPageController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\Mvc\\ReviewPageController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\ReviewPageController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\Mvc\\ReviewPageController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T03:47:00.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "TicketPageController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\TicketPageController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\Mvc\\TicketPageController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\TicketPageController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\Mvc\\TicketPageController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T03:41:35.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TagDetails.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TagDetails.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\ViewModels\\TagDetails.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ViewModels\\TagDetails.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\ViewModels\\TagDetails.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T03:37:42.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "TagPageController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\TagPageController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\Mvc\\TagPageController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\Mvc\\TagPageController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\Mvc\\TagPageController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T03:31:13.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "dbo.Viewers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Viewers.sql",
-              "ToolTip": "dbo.Viewers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-25T03:11:33.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "dbo.Reviews [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Reviews.sql",
-              "ToolTip": "dbo.Reviews [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-25T03:11:26.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "dbo.Movies [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Movies.sql",
-              "ToolTip": "dbo.Movies [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-25T03:09:28.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "dbo.Images [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Images.sql",
-              "ToolTip": "dbo.Images [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-25T02:59:15.934Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "20241125025857_Update.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Data\\Migrations\\20241125025857_Update.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Data\\Migrations\\20241125025857_Update.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Data\\Migrations\\20241125025857_Update.cs",
-              "RelativeToolTip": "MovieXReview\\Data\\Migrations\\20241125025857_Update.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T02:58:57.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Program.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Program.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Program.cs",
-              "RelativeToolTip": "MovieXReview\\Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAswB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T02:54:27.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "dbo.Tags [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.Tags.sql",
-              "ToolTip": "dbo.Tags [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-25T02:24:41.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ViewerController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\ViewerController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\ViewerController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\ViewerController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\ViewerController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T01:19:49.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TagService.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\TagService.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Service\\TagService.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\TagService.cs",
-              "RelativeToolTip": "MovieXReview\\Service\\TagService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:02:33.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Review.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Models\\Review.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\Review.cs",
-              "RelativeToolTip": "MovieXReview\\Models\\Review.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:54:47.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MovieService.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\MovieService.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Service\\MovieService.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\MovieService.cs",
-              "RelativeToolTip": "MovieXReview\\Service\\MovieService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:09:54.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ReviewService.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\ReviewService.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Service\\ReviewService.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\ReviewService.cs",
-              "RelativeToolTip": "MovieXReview\\Service\\ReviewService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:29:48.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ReviewInterface.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\ReviewInterface.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Interface\\ReviewInterface.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\ReviewInterface.cs",
-              "RelativeToolTip": "MovieXReview\\Interface\\ReviewInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:26:49.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ReviewController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\ReviewController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\ReviewController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\ReviewController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\ReviewController.cs",
-              "ViewState": "AQIAANMAAAAAAAAAAAAuwN4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:25:03.852Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MovieImageInterface.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\MovieImageInterface.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Interface\\MovieImageInterface.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\MovieImageInterface.cs",
-              "RelativeToolTip": "MovieXReview\\Interface\\MovieImageInterface.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:38:42.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MovieImageService.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\MovieImageService.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Service\\MovieImageService.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\MovieImageService.cs",
-              "RelativeToolTip": "MovieXReview\\Service\\MovieImageService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:37:55.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MovieImageController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\MovieImageController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\MovieImageController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\MovieImageController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\MovieImageController.cs",
-              "ViewState": "AQIAAMgAAAAAAAAAAAAswOIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:34:01.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TicketController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\TicketController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\TicketController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\TicketController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\TicketController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:19:26.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "MovieXReview\\Controllers\\MovieController.cs",
-              "ToolTip": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "MovieXReview\\Controllers\\MovieController.cs",
-              "ViewState": "AQIAAHYBAAAAAAAAAAAAAJEBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T08:18:38.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Service\\TicketService.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Service\\TicketService.cs",
@@ -688,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 2,
               "Title": "TagInterface.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Interface\\TagInterface.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Interface\\TagInterface.cs",
@@ -701,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 3,
               "Title": "TagController.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Controllers\\TagController.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Controllers\\TagController.cs",
@@ -714,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 23,
               "Title": "20241123234345_FIRSTMIGRATION.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Migrations\\20241123234345_FIRSTMIGRATION.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Migrations\\20241123234345_FIRSTMIGRATION.cs",
@@ -726,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 13,
               "Title": "20241123234203_InitialMigration.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Migrations\\20241123234203_InitialMigration.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Migrations\\20241123234203_InitialMigration.cs",
@@ -737,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 14,
               "Title": "20241123233743_Dtoupdate.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Data\\Migrations\\20241123233743_Dtoupdate.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Data\\Migrations\\20241123233743_Dtoupdate.cs",
@@ -749,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 15,
               "Title": "20241123233223_DtoUpdate.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Data\\Migrations\\20241123233223_DtoUpdate.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Data\\Migrations\\20241123233223_DtoUpdate.cs",
@@ -761,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 10,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\ErrorViewModel.cs",
@@ -773,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 4,
               "Title": "ServiceResponse.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\ServiceResponse.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\ServiceResponse.cs",
@@ -786,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 9,
               "Title": "Movie.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\Movie.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\Movie.cs",
@@ -799,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 6,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\Ticket.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\Ticket.cs",
@@ -812,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 5,
               "Title": "Viewer.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\Viewer.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\Viewer.cs",
@@ -825,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 7,
               "Title": "Tag.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\Tag.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\Tag.cs",
@@ -838,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 11,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Data\\ApplicationDbContext.cs",
@@ -850,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 8,
               "Title": "MovieImage.cs",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\Models\\MovieImage.cs",
               "RelativeDocumentMoniker": "MovieXReview\\Models\\MovieImage.cs",
@@ -863,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 16,
               "Title": "dbo.AspNetUsers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
@@ -872,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 17,
               "Title": "dbo.AspNetUserRoles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.AspNetUserRoles.sql",
               "ToolTip": "dbo.AspNetUserRoles [Data]",
@@ -881,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 18,
               "Title": "dbo.AspNetRoles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.AspNetRoles.sql",
               "ToolTip": "dbo.AspNetRoles [Data]",
@@ -890,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 19,
               "Title": "dbo.AspNetUserLogins [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.AspNetUserLogins.sql",
               "ToolTip": "dbo.AspNetUserLogins [Data]",
@@ -899,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 20,
               "Title": "dbo.AspNetUserTokens [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MovieXReview/True/SqlTable/dbo.AspNetUserTokens.sql",
               "ToolTip": "dbo.AspNetUserTokens [Data]",
@@ -908,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 12,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\appsettings.json",
               "RelativeDocumentMoniker": "MovieXReview\\appsettings.json",
@@ -920,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 21,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\OWNER\\source\\repos\\C-_MovieXReview\\MovieXReview\\appsettings.Development.json",
               "RelativeDocumentMoniker": "MovieXReview\\appsettings.Development.json",
@@ -932,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 22,
               "Title": "20241121230804_review.cs",
               "DocumentMoniker": "C:\\Users\\flora\\source\\repos\\MovieXReview\\MovieXReview\\Data\\Migrations\\20241121230804_review.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\flora\\source\\repos\\MovieXReview\\MovieXReview\\Data\\Migrations\\20241121230804_review.cs",

@@ -38,52 +38,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/MovieImagePage/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbWFnZVBhZ2VcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/MovieImagePage/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbWFnZVBhZ2VcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/MovieImagePage/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbWFnZVBhZ2VcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/MovieImagePage/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbWFnZVBhZ2VcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/MovieImagePage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbWFnZVBhZ2VcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/MoviePage/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVQYWdlXExpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/ReviewPage/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/ReviewPage/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/ReviewPage/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/ReviewPage/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/ReviewPage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/ReviewPage/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3UGFnZVxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/Shared/Error.cshtml]
@@ -96,26 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/TagPage/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnUGFnZVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/TagPage/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnUGFnZVxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/TagPage/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnUGFnZVxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/TagPage/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnUGFnZVxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/TagPage/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnUGFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/OWNER/source/repos/C-_MovieXReview/MovieXReview/Views/TicketPage/List.cshtml]
