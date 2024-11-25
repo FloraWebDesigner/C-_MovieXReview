@@ -14,8 +14,12 @@ namespace MovieXReview.Models
         public int ImageTotal { get; set; }
 
         // A review belongs to one movie
-        public required virtual Movie Movie { get; set; }
+        public virtual Movie Movie { get; set; }
         public int MovieId { get; set; }
+
+        // A review belongs to a viewer
+        public virtual Viewer Viewer { get; set; }
+        public int ViewerId { get; set; }
     }
 
     public class ReviewDto
@@ -26,7 +30,12 @@ namespace MovieXReview.Models
         public float Rate { get; set; }
         public DateTime CreatedAt { get; set; }
         public int ImageTotal { get; set; }
+        public string MovieName { get; set; } 
+        public string ViewerName { get; set; }
 
+        // Add these properties for relationships
+        public int MovieId { get; set; } // To associate with a movie
+        public int ViewerId { get; set; }
     }
 
 }

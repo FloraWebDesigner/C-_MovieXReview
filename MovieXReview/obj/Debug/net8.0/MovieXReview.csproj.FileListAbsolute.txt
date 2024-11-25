@@ -833,3 +833,7 @@ C:\Users\flora\Source\Repos\C-_MovieXReview v1\MovieXReview\obj\Debug\net8.0\sco
 C:\Users\flora\Source\Repos\C-_MovieXReview v1\MovieXReview\obj\Debug\net8.0\MovieXRe.F5736280.Up2Date
 C:\Users\flora\Source\Repos\C-_MovieXReview v1\MovieXReview\obj\Debug\net8.0\MovieXReview.genruntimeconfig.cache
 C:\Users\flora\Source\Repos\C-_MovieXReview v1\MovieXReview\obj\Debug\net8.0\ref\MovieXReview.dll
+C:\Users\OWNER\source\repos\C-_MovieXReview\MovieXReview\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\OWNER\source\repos\C-_MovieXReview\MovieXReview\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\OWNER\source\repos\C-_MovieXReview\MovieXReview\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\OWNER\source\repos\C-_MovieXReview\MovieXReview\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
