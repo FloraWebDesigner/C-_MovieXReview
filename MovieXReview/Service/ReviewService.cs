@@ -36,8 +36,6 @@ namespace MovieXReview.Service
                 Rate = review.Rate,
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
-                ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}", 
-                MovieName = review.Movie.MovieName,
                 ViewerId = review.ViewerId,
                 MovieId = review.MovieId
             });
@@ -61,8 +59,6 @@ namespace MovieXReview.Service
                 Rate = review.Rate,
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
-                ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}",
-                MovieName = review.Movie.MovieName,
                 ViewerId = review.ViewerId,
                 MovieId = review.MovieId
             };
@@ -97,8 +93,8 @@ namespace MovieXReview.Service
                 ReviewContent = reviewDto.ReviewContent,
                 Rate = reviewDto.Rate,
                 CreatedAt = DateTime.Now,
-                MovieId = movie.MovieId,
-                ViewerId = viewer.ViewerId
+                MovieId = reviewDto.MovieId,
+                ViewerId = reviewDto.ViewerId
             };
 
             _context.Reviews.Add(review);
@@ -154,7 +150,6 @@ namespace MovieXReview.Service
             return response;
         }
 
-        // Lists all reviews for a specific movie
         public async Task<IEnumerable<ReviewDto>> ListReviewsForMovie(int movieId)
         {
             var reviews = await _context.Reviews
@@ -170,7 +165,7 @@ namespace MovieXReview.Service
                 Rate = review.Rate,
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
-                ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}"
+                ViewerId = review.ViewerId
             });
         }
 
@@ -190,7 +185,7 @@ namespace MovieXReview.Service
                 Rate = review.Rate,
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
-                MovieName = review.Movie.MovieName
+                MovieId = review.MovieId
             });
         }
 

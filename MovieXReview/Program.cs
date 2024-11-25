@@ -17,12 +17,13 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+
 builder.Services.AddScoped<MovieInterface, MovieService>();
 builder.Services.AddScoped<TicketInterface, TicketService>();
 builder.Services.AddScoped<ViewerInterface, ViewerService>();
 builder.Services.AddScoped<TagInterface, TagService>();
 builder.Services.AddScoped<MovieImageInterface, MovieImageService>();
-
+builder.Services.AddScoped<ReviewInterface, ReviewService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

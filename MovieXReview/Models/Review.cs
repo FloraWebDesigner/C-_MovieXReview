@@ -30,8 +30,6 @@ namespace MovieXReview.Models
         public float Rate { get; set; }
         public DateTime CreatedAt { get; set; }
         public int ImageTotal { get; set; }
-        public string MovieName { get; set; } 
-        public string ViewerName { get; set; }
 
         // Add these properties for relationships
         public int MovieId { get; set; } // To associate with a movie
