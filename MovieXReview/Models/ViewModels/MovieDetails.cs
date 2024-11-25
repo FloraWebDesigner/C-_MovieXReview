@@ -11,5 +11,11 @@
         // All viewers for this movie
         public IEnumerable<ViewerDto>? MovieViewers { get; set; }
 
+        // All reviews for this movie
+        public IEnumerable<ReviewDto>? MovieReviews { get; set; }
+
+        // All images for this movie
+        public IEnumerable<ImagesDto>? MovieImages { get; set; }
+
     }
 }

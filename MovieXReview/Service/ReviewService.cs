@@ -37,7 +37,8 @@ namespace MovieXReview.Service
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
                 ViewerId = review.ViewerId,
-                MovieId = review.MovieId
+                MovieId = review.MovieId,
+                ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}"
             });
         }
         // Finds a specific review by ID
@@ -60,7 +61,9 @@ namespace MovieXReview.Service
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
                 ViewerId = review.ViewerId,
-                MovieId = review.MovieId
+                MovieId = review.MovieId,
+                ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}"
+
             };
         }
 

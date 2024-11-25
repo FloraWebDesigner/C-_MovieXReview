@@ -28,36 +28,38 @@ namespace MovieXReview.Services
 
         public async Task<IEnumerable<MovieDto>> ListMovies()
         {
-            // all Movies
-            List<Movie> Movies = await _context.Movies
+            // Fetch all movies and include related images
+            var movies = await _context.Movies
+                .Include(m => m.Images) // Include related images
+                .Include(m => m.Tickets) // Include related tickets
                 .ToListAsync();
-            // empty list of data transfer object MovieDto
-            List<MovieDto> MovieDtos = new List<MovieDto>();
-            // foreach Movie record in database
-            foreach (Movie Movie in Movies)
-            {
-                // create new instance of MovieDto, add to list
-                MovieDto MovieDto = new MovieDto()
-                {
-                    MovieId = Movie.MovieId,
-                    MovieName = Movie.MovieName,
-                    Year = (int)Movie.Year,
-                    Introduction = (string)Movie.Introduction,
-                    Rate = (float)Movie.Rate,
-                    Duration = (string)Movie.Duration,
-                    Director = (string)Movie.Director,
-                    Star = (string)Movie.Star,
-                    TicketQuantity = (int)Movie.TicketQuantity,
-                    // HasPic = Movie.HasPic,
 
-                };
-                //if (Movie.HasPic)
-                //{
-                //    MovieDto.MovieImgPath = $"/img/movies/{Movie.MovieId}{Movie.PicExtension}";
-                //}
-                MovieDtos.Add(MovieDto);
-            }
-            return MovieDtos;
+            // Map movies to MovieDto
+            var movieDtos = movies.Select(movie => new MovieDto
+            {
+                MovieId = movie.MovieId,
+                MovieName = movie.MovieName ?? "Unknown Title",
+                Year = movie.Year ?? 0,
+                Introduction = movie.Introduction ?? "No Introduction Available",
+                Rate = movie.Rate,
+                Duration = movie.Duration ?? "Unknown Duration",
+                Director = movie.Director ?? "Unknown Director",
+                Star = movie.Star ?? "Unknown Star",
+                TicketQuantity = movie.TicketQuantity ?? 0,
+                TicketSold = movie.Tickets?.Count() ?? 0,
+                TicketAvailable = (movie.TicketQuantity ?? 0) - (movie.Tickets?.Count() ?? 0),
+
+                // Include images when movie is listed
+                Images = movie.Images?.Select(image => new ImagesDto
+                {
+                    ImageId = image.ImageId,
+                    FileName = image.FileName,
+                    PicExtension = image.PicExtension,
+                    HasPic = image.HasPic
+                }).ToList()
+            });
+
+            return movieDtos;
         }
 
         public async Task<MovieDto?> FindMovie(int id)

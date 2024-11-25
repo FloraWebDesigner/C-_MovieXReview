@@ -31,9 +31,12 @@ namespace MovieXReview.Models
         public DateTime CreatedAt { get; set; }
         public int ImageTotal { get; set; }
 
-        // Add these properties for relationships
-        public int MovieId { get; set; } // To associate with a movie
+
+        public int MovieId { get; set; } 
         public int ViewerId { get; set; }
+
+        public string ViewerName { get; set; } 
+
     }
 
 }

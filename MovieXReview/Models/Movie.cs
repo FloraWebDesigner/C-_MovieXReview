@@ -54,5 +54,8 @@ namespace MovieXReview.Models
         // public string? MovieImgPath { get; set; }
 
         public IEnumerable<TagDto>? Tags { get; set; }
+
+        public IEnumerable<ImagesDto>? Images { get; set; }
+
     }
 }
