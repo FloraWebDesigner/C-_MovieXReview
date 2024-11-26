@@ -94,12 +94,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0UGFnZVxOZXdGcm9tVmlld2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/Viewer/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyXEVkaXQuY3NodG1s
+[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/ViewerPage/ConfirmDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyUGFnZVxDb25maXJtRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/Viewer/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyXExpc3QuY3NodG1s
+[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/ViewerPage/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyUGFnZVxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/ViewerPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyUGFnZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/ViewerPage/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyUGFnZVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/ViewerPage/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld2VyUGFnZVxOZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/flora/source/repos/C-_MovieXReview v2/MovieXReview/Views/_ViewImports.cshtml]

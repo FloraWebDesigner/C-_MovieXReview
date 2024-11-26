@@ -1,0 +1,86 @@
+﻿@model MovieXReview.Models.ViewModels.ViewerDetails
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<div class="container-fluid bg-dark p-3 text-white">
+    <h1 class="text-center">Viewer Details with Bookings</h1>
+</div>
+<div class="container-fluid bg-light p-3 text-dark mb-5">
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="text-center my-2">Detailed Information</h4>
+
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-right">
+                        First Name
+                    </div>
+                    <div class="col-md-7">
+                        @Html.DisplayFor(model => model.Viewer.FirstName)
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-right">
+                        Last Name
+                    </div>
+                    <div class="col-md-7">
+                        @Html.DisplayFor(model => model.Viewer.LastName)
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-right">
+                        Identity
+                    </div>
+                    <div class="col-md-7">
+                        @Html.DisplayFor(model => model.Viewer.Identity)
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-right">
+                        Membership
+                    </div>
+                    <div class="col-md-7">
+                        @Html.DisplayFor(model => model.Viewer.Membership)
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-right">
+                        Age
+                    </div>
+                    <div class="col-md-7">
+                        @Html.DisplayFor(model => model.Viewer.Age)
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6">
+                <h4 class="text-center mt-2 mb-3">Movie Tickets(ticket no.)</h4>
+                <div class="row d-flex flex-row">
+
+                    @foreach (var TicketDto in Model.ViewerTickets)
+                    {
+                        <div class="col-md-6">
+                            <div class="bg-black p-2 m-1 border border-white text-white rounded-3 d-flex flex-row flex-md-wrap justify-content-between" style="width:18rem;">
+                                <span>@TicketDto.MovieName</span>
+                                <span class="badge bg-primary p-1 text-white">@TicketDto.TicketNo</span>
+                            </div>
+                        </div>
+
+                    }
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 d-flex flex-row justify-content-between m-5">
+                <a asp-action="List" class="btn btn-warning shadow" style="width:12rem;">Back to List</a>
+                <a asp-action="Edit" asp-route-id="@Model.Viewer.ViewerId" class="btn btn-warning shadow" style="width:12rem;">Edit</a>
+                <a asp-controller="TicketPAge" asp-action="NewFromViewer" asp-route-id="@Model.Viewer.ViewerId" class="btn btn-warning shadow" style="width:12rem;">Book a Ticket</a>
+            </div>
+        </div>
+
+    </div>
+</div>
