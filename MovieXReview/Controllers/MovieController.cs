@@ -39,7 +39,7 @@ namespace MovieXReview.Controllers
         /// </returns>
         /// <example>
         /// GET: api/Movie/Find/1 -> {
-        /// {"MovieId": 1,"movie_name": "Green Book","year": 2018,"introduction": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.", "rate": 8.2, "duration": "2h 10m", "director": "Peter Farrelly", "star": "Nick Vallelonga,Brian Hayes,CurriePeter Farrelly","ticket_quantity": 50}
+        /// {"MovieId": 1,"MovieName": "Green Book","year": 2018,"introduction": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.", "rate": 8.2, "duration": "2h 10m", "director": "Peter Farrelly", "star": "Nick Vallelonga,Brian Hayes,CurriePeter Farrelly","ticket_quantity": 50}
         /// </example>
         [HttpGet(template: "Find/{id}")]
         public async Task<ActionResult<MovieDto>> FindMovie(int id)
@@ -82,7 +82,7 @@ namespace MovieXReview.Controllers
         /// Updates a Movie
         /// </summary>
         /// <param name="id">The ID of the Movie to update</param>
-        /// <param name="MovieDto">The required information to update the Movie (MovieId,movie_name,year,introduction,rate	duration,director,star	ticket_quantity)</param>
+        /// <param name="MovieDto">The required information to update the Movie (MovieId,MovieName,year,introduction,rate	duration,director,star	ticket_quantity)</param>
         /// <returns>
         /// 302 Redirect (/Identity/Account/Login)
         /// or
@@ -129,7 +129,7 @@ namespace MovieXReview.Controllers
         /// <summary>
         /// Add a Movie
         /// </summary>
-        /// <param name="MovieDto">The required information to add the Movie (MovieId,movie_name,year,introduction,rate	duration,director,star	ticket_quantity)</param>
+        /// <param name="MovieDto">The required information to add the Movie (MovieId,MovieName,year,introduction,rate	duration,director,star	ticket_quantity)</param>
         /// <returns>
         /// 302 Redirect (/Identity/Account/Login)
         /// or
@@ -213,7 +213,7 @@ namespace MovieXReview.Controllers
         /// </returns>
         /// <example>
         /// GET: api/Movie/Find/1 -> {
-        /// {"MovieId": 1,"movie_name": "Green Book","year": 2018,"introduction": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.", "rate": 8.2, "duration": "2h 10m", "director": "Peter Farrelly", "star": "Nick Vallelonga,Brian Hayes,CurriePeter Farrelly","ticket_quantity": 50}
+        /// {"MovieId": 1,"MovieName": "Green Book","year": 2018,"introduction": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.", "rate": 8.2, "duration": "2h 10m", "director": "Peter Farrelly", "star": "Nick Vallelonga,Brian Hayes,CurriePeter Farrelly","ticket_quantity": 50}
         /// </example>
         [HttpGet(template: "TicketCountForMovie/{id}")]
         public async Task<ActionResult<MovieDto>> TicketCountForMovie(int id)
@@ -245,7 +245,7 @@ namespace MovieXReview.Controllers
         /// /api/Movie/ListForViewer/5 ->
         ///  {
         //  "MovieId": 1,
-        //  "movie_name": "Green Book",
+        //  "MovieName": "Green Book",
         //  "year": 2018,
         //  "introduction": "A working-class Italian-American bouncer becomes the driver for an African-American classical pianist on a tour of venues through the 1960s American South.",
         //  "rate": 8.2,
@@ -258,7 +258,7 @@ namespace MovieXReview.Controllers
         //},
         //{
         //  "MovieId": 2,
-        //  "movie_name": "The Others",
+        //  "MovieName": "The Others",
         //  "year": 2001,
         //  "introduction": "In 1945, immediately following the end of Second World War, a woman who lives with her two photosensitive children on her darkened old family estate in the Channel Islands becomes convinced that the home is haunted.",
         //  "rate": 7.6,
@@ -271,7 +271,7 @@ namespace MovieXReview.Controllers
         //},
         //{
         //  "MovieId": 5,
-        //  "movie_name": "The Invisible Guest",
+        //  "MovieName": "The Invisible Guest",
         //  "year": 2016,
         //  "introduction": "A young businessman wakes up in a hotel room locked from the inside with the dead body of his lover next to him. He hires a prestigious lawyer, and over one night they work together to clarify what happened in a frenetic race against time.",
         //  "rate": 8,
@@ -284,7 +284,7 @@ namespace MovieXReview.Controllers
         //},
         //{
         //  "MovieId": 7,
-        //  "movie_name": "Shutter Island",
+        //  "MovieName": "Shutter Island",
         //  "year": 2010,
         //  "introduction": "Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.",
         //  "rate": 8.2,

@@ -13,5 +13,9 @@ namespace MovieXReview.Interface
 
         //Related Methods
         Task<IEnumerable<MovieDto>> ListMoviesForTag(int id);
+
+        Task<IEnumerable<TagDto>> ListTagsForMovie(int id);
+
+
     }
 }

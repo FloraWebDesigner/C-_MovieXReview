@@ -20,3 +20,37 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.btn-yellow {
+    background-color: #CF8C3F !important; 
+    color: white !important; 
+}
+
+.btn-green {
+    background-color: #1E5F6C !important; 
+    color: white !important; 
+}
+
+.btn-red {
+    background-color: #903B3B !important; 
+    color: white !important; 
+}
+
+.btn-grey {
+    background-color: #383838 !important;
+    color: white !important;
+}
+
+.bg-darkgary {
+    background-color: #292929 !important;
+}
+
+.bg-lightblack {
+    background-color: rgba(2, 2, 2, 0.5) !important;
+}
+
+.bg-black {
+    background-color: #000000 !important;
+    color: white !important;
+}

@@ -13,13 +13,16 @@ namespace MovieXReview.Controllers
         private readonly MovieInterface _MovieService;
         private readonly ViewerInterface _ViewerService;
         private readonly TicketInterface _TicketService;
+        private readonly TagInterface _TagService;
 
         // dependency injection of service interface
-        public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService)
+        public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService, TagInterface TagService)
         {
             _MovieService = MovieService;
             _ViewerService = ViewerService;
             _TicketService = TicketService;
+            _TagService = TagService;
+
         }
         public IActionResult Index()
         {
@@ -49,10 +52,17 @@ namespace MovieXReview.Controllers
             {
                 return View("Error", new ErrorViewModel() { Errors = ["Could not find Viewers"] });
             }
+
             IEnumerable<TicketDto> AssociatedTickets = await _TicketService.ListTicketsForMovie(id);
             if (AssociatedTickets == null)
             {
                 return View("Error", new ErrorViewModel() { Errors = ["Could not find Tickets"] });
+            }
+
+            IEnumerable<TagDto> AssociatedTags = await _TagService.ListTagsForMovie(id);
+            if (AssociatedTags == null)
+            {
+                return View("Error", new ErrorViewModel() { Errors = ["Could not find Tags"] });
             }
 
 
@@ -61,7 +71,8 @@ namespace MovieXReview.Controllers
             {
                 Movie = MovieDto,
                 MovieViewers = AssociatedViewers,
-                MovieTickets = AssociatedTickets
+                MovieTickets = AssociatedTickets,
+                MovieTags = AssociatedTags,
             };
             return View(MovieInfo);
         }

@@ -25,6 +25,7 @@
     <Folder Include="Views\ReviewPage\" />
     <Folder Include="Views\TagPage\" />
     <Folder Include="Views\ViewerPage\" />
+    <Folder Include="wwwroot\images\movies\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,94 @@
+﻿@model MovieXReview.Models.MovieDto
+
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<div class="container-fluid bg-darkgary p-3 text-white">
+    <h3 class="text-center">Update a Movie</h3>
+
+    <div class="container-fluid bg-darkgary px-3 text-dark">
+        <div class="container align-content-center mb-lg-5">
+            <div>
+                <div>
+                    <a asp-action="List" class="btn btn-primary shadow">Back to List</a>
+                </div>
+                <div class="row justify-content-center">
+                    <form asp-action="Update" asp-route-id="@Model.MovieId" class="form col-md-9 bg-black text-white p-md-3 text-capitalize rounded-2 shadow mb-3" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="MovieId" />
+                        <div class="row">
+                            <div class="col-md-2">
+
+@*                                 @if (Model.HasPic)
+                                {
+                                    <label for="MoviePic">Current Image:</label>
+                                    <img src="@Model.MovieImgPath" alt="Movie Image" class="mt-2 img-fluid" />
+
+                                } *@
+                                <label for="MoviePic">Upload New Image:</label>
+                                <input type="file" name="MoviePic" id="MoviePic" />
+
+                            </div>
+                            <div class="col-md-5">
+
+                                <div class="form-group mb-3">
+                                    <label asp-for="MovieName" class="control-label"></label>
+                                    <input asp-for="MovieName" class="form-control" />
+                                    <span asp-validation-for="MovieName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label asp-for="Year" class="control-label"></label>
+                                    <input asp-for="Year" class="form-control" />
+                                    <span asp-validation-for="Year" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label asp-for="Introduction" class="control-label"></label>
+                                    <input asp-for="Introduction" class="form-control" />
+                                    <span asp-validation-for="Introduction" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label asp-for="Rate" class="control-label"></label>
+                                    <input asp-for="Rate" class="form-control" />
+                                    <span asp-validation-for="Rate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group mb-3">
+                                    <label asp-for="Duration" class="control-label"></label>
+                                    <input asp-for="Duration" class="form-control" />
+                                    <span asp-validation-for="Duration" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label asp-for="Director" class="control-label"></label>
+                                    <input asp-for="Director" class="form-control" />
+                                    <span asp-validation-for="Director" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label asp-for="Star" class="control-label"></label>
+                                    <input asp-for="Star" class="form-control" />
+                                    <span asp-validation-for="Star" class="text-danger"></span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label asp-for="TicketQuantity" class="control-label"></label>
+                                    <input asp-for="TicketQuantity" class="form-control" />
+                                    <span asp-validation-for="TicketQuantity" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group pb-3">
+                            <input type="submit" value="Save" class="btn btn-warning w-100" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

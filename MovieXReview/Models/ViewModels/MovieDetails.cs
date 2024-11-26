@@ -17,5 +17,8 @@
         // All images for this movie
         public IEnumerable<ImagesDto>? MovieImages { get; set; }
 
+        // All tags for this movie
+        public IEnumerable<TagDto>? MovieTags { get; set; }
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using MovieXReview.Data;
 using MovieXReview.Interface;
 using MovieXReview.Models;
 using MovieXReview.Service;
+using MovieXReview.Services;
 
 namespace MovieXReview.Controllers
 {
@@ -220,5 +222,32 @@ namespace MovieXReview.Controllers
 
             return Ok(movies);
         }
+
+        /// <summary>
+        /// Returns a list of all movies associated with a specific tag identified by its {id}.
+        /// </summary>
+        /// <param name="id">The ID of the tag for which to list associated movies</param>
+        /// <returns>
+        /// 200 OK
+        /// [{MovieDto},{MovieDto},..]
+        /// or
+        /// 404 Not Found
+        /// </returns>
+        /// <example>
+        /// GET: api/Tag/ListMoviesForTag/4 -> [{MovieDto},{MovieDto},..]
+        /// </example>
+        /// 
+
+
+        ////ListMoviesForTag
+        //[HttpGet(template: "ListForMovie/{id}")]
+        //[Authorize]
+        //public async Task<IActionResult> ListTagsForMovie(int id)
+        //{
+        //    // empty list of data transfer object ViewerDto
+        //    IEnumerable<TagDto> TagDtos = await _TagService.ListTagsForMovie(id);
+        //    // return 200 OK with ViewerDtos
+        //    return Ok(TagDtos);
+        //}
     }
 }

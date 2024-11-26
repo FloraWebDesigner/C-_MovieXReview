@@ -6,8 +6,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.IO;
 using MovieXReview.Data;
 using Microsoft.AspNetCore.Mvc;
-using MovieXReview.Data;
-using MovieXReview.Models;
 
 namespace MovieXReview.Service
 {
@@ -136,6 +134,28 @@ namespace MovieXReview.Service
 
             return movies;
         }
-        
+
+
+        // Lists all tags associated with a movie by ID, Includes movie details + uploader info
+        public async Task<IEnumerable<TagDto>> ListTagsForMovie(int id)
+        {
+            var movie = await _context.Movies
+                .Include(m => m.Tags)
+                .FirstOrDefaultAsync(m => m.MovieId == id);
+
+            if (movie == null || movie.Tags == null)
+            {
+                return new List<TagDto>();
+            }
+
+            // Map movies to MovieDto
+            var tags = movie.Tags.Select(tag => new TagDto
+            {
+                TagName = tag.TagName,  
+                TagColor = tag.TagColor 
+            }).ToList();
+            return tags;
+        }
+
     }
 }

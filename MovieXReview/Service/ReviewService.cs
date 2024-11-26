@@ -6,8 +6,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.IO;
 using MovieXReview.Data;
 using Microsoft.AspNetCore.Mvc;
-using MovieXReview.Data;
-using MovieXReview.Models;
+
 
 namespace MovieXReview.Service
 {

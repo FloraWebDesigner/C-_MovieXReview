@@ -200,7 +200,7 @@ namespace MovieXReview.Controllers
         /// <summary>
         /// Show a list of viewers by movie
         /// </summary>
-        /// <param name="id">movie_id</param>
+        /// <param name="id">MovieId</param>
         /// <returns>
         /// 204 No Content
         /// or
@@ -210,8 +210,8 @@ namespace MovieXReview.Controllers
         /// /api/Movie/ListForViewer/1
         //ListViewersForMovie[
         //  {
-        //    "movie_id": 7,
-        //    "movie_name": "Shutter Island",
+        //    "MovieId": 7,
+        //    "MovieName": "Shutter Island",
         //    "year": 2010,
         //    "introduction": "Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.",
         //    "rate": 8.2,
@@ -225,8 +225,8 @@ namespace MovieXReview.Controllers
         //    "movieImgPath": null
         //  },
         //  {
-        //    "movie_id": 8,
-        //    "movie_name": "Cinderella",
+        //    "MovieId": 8,
+        //    "MovieName": "Cinderella",
         //    "year": 2015,
         //    "introduction": "When her father unexpectedly dies, young Ella finds herself at the mercy of her cruel stepmother and her scheming stepsisters. Never one to give up hope, Ella's fortunes begin to change after meeting a dashing stranger.",
         //    "rate": 6.9,
@@ -240,8 +240,8 @@ namespace MovieXReview.Controllers
         //    "movieImgPath": null
         //  },
         //  {
-        //    "movie_id": 9,
-        //    "movie_name": "The Shawshank Redemption",
+        //    "MovieId": 9,
+        //    "MovieName": "The Shawshank Redemption",
         //    "year": 1994,
         //    "introduction": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
         //    "rate": 9.3,
@@ -255,8 +255,8 @@ namespace MovieXReview.Controllers
         //    "movieImgPath": null
         //  },
         //  {
-        //    "movie_id": 23,
-        //    "movie_name": "Humber History",
+        //    "MovieId": 23,
+        //    "MovieName": "Humber History",
         //    "year": 2024,
         //    "introduction": "The history of Humber college",
         //    "rate": 10,
