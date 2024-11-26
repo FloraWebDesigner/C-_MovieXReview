@@ -1,0 +1,55 @@
+﻿ @model MovieXReview.Models.TicketDto
+@{
+    ViewData["Title"] = "ConfirmDelete";
+}
+<div class="container-fluid p-3">
+    <h1 class="text-center text-white">Cancel a Ticket</h1>
+</div>
+<div class="container-fluid p-3 text-white">
+    <div class="container align-content-center">
+        <div>
+            <a asp-action="List" class="btn btn-primary shadow">Back to List</a>
+        </div>
+
+        <div class="row justify-content-center">
+            <h3 class="text-center text-white">Are you sure you want to delete the ticket?</h3>
+            <div class="form col-md-6 mx-auto text-white p-md-3 text-capitalize rounded-2 shadow mb-5 fs-5">
+                <div class="row m-2">
+                    <div class="col-md-4 text-start">
+                        @Html.DisplayNameFor(model => model.TicketNo)
+                    </div>
+                    <div class="col-md-8 fw-bolder text-center">
+                        @Html.DisplayFor(model => model.TicketNo)
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-md-4 text-start">
+                        @Html.DisplayNameFor(model => model.MovieName)
+                    </div>
+                    <div class="col-md-8 fw-bolder text-center">
+                        @Html.DisplayFor(model => model.MovieName)
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-md-4 text-start">
+                        @Html.DisplayNameFor(model => model.ViewerName)
+                    </div>
+                    <div class="col-md-8 fw-bolder text-center">
+                        @Html.DisplayFor(model => model.ViewerName)
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-md-4 text-start">
+                        @Html.DisplayNameFor(model => model.Identity)
+                    </div>
+                    <div class="col-md-8 fw-bolder text-center">
+                        @Html.DisplayFor(model => model.Identity)
+                    </div>
+                </div>
+                <div class="form-group p-3">
+                    <form asp-action="Delete" asp-route-id="@Model.TicketId">
+                        <input type="hidden" asp-for="TicketId" />
+                        <input type="submit" value="Delete" class="btn btn-red w-100" />
+                    </form>
+                </div>
+

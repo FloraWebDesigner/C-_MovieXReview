@@ -1,1 +1,71 @@
-﻿
+﻿@model IEnumerable<MovieXReview.Models.TicketDto>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="container-fluid p-3 text-white">
+    <h1 class="text-center">Booking List</h1>
+</div>
+<div class="container-fluid p-3">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-between mb-3">
+            <a asp-action="New" class="btn btn-primary shadow">Create New</a>
+            <a href="/ViewerPage/List" class="btn btn-primary shadow">Go to Viewer Overview</a>
+            <a href="/MoviePage/List" class="btn btn-primary shadow">Go to Movie Overview</a>
+        </div>
+        <table class="table mb-5 align-middle text-white fs-6">
+            <thead>
+                <tr class="table text-capitalize text-white">
+                    <th class="text-center">
+                        @Html.DisplayNameFor(model => model.TicketId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MovieName)
+
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TicketNo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ViewerName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Identity)
+                    </th>
+                    <th >
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketId)
+                        </td>
+                        <td>
+                            <a asp-controller="MoviePage" asp-action="Details" asp-route-id="@item.MovieId" class="text-decoration-none text-white">
+                                @Html.DisplayFor(modelItem => item.MovieName)
+                            </a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketNo)
+                        </td>
+                        <td>
+                            <a asp-controller="ViewerPage" asp-action="Details" asp-route-id="@item.ViewerId" class="text-decoration-none text-white">
+                                @Html.DisplayFor(modelItem => item.ViewerName)
+                            </a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Identity)
+                        </td>
+                        <td class="d-flex flex-row justify-content-evenly align-items-center">
+                            <a asp-action="Edit" asp-route-id="@item.TicketId" class="btn btn-green mb-sm-1 py-md-1" style="width: 10rem;">Edit</a>
+                            <a asp-action="ConfirmDelete" asp-route-id="@item.TicketId" class="btn btn-red py-md-1" style="width: 10rem;">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>

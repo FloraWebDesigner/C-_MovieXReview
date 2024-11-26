@@ -1,0 +1,73 @@
+﻿@model MovieXReview.Models.ViewModels.TicketEdit
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container-fluid btn-grey p-3 text-white">
+    <h1 class="text-center">Modify a Ticket</h1>
+</div>
+<div class="container-fluid p-3 text-white">
+    <div class="container align-content-center">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <a asp-action="List" class="btn btn-primary shadow">Back to Ticket List</a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <form asp-action="Update" asp-route-id="@Model.Ticket.TicketId" class="form col-md-4 bg-white text-dark p-md-3 rounded-2 shadow mb-5">
+                <input type="hidden" name="TicketId" value="@Model.Ticket.TicketId" />
+                <div class="form-group mb-3 row">
+                    <label for="TicketNo" class="control-label col-md-5 fw-bolder fs-5">Ticket No.</label>
+                    <input name="TicketNo" value="@Model.Ticket.TicketNo" class="col-md-6" />
+                </div>
+                <div class="form-group mb-3 row">
+                    <label for="MovieId" class="control-label fw-bolder fs-5 col-md-5">Movie Name</label>
+                    <select name="MovieId" class="col-md-6">
+
+                        @foreach (MovieDto MovieDto in Model.MovieOptions)
+                        {
+
+                            if (MovieDto.MovieId == Model.Ticket.MovieId)
+                            {
+                                <option value="@MovieDto.MovieId" selected="selected">#@MovieDto.MovieId @MovieDto.MovieName </option>
+
+                            }
+                            else
+                            {
+                                <option value="@MovieDto.MovieId">#@MovieDto.MovieId @MovieDto.MovieName </option>
+                            }
+
+                        }
+                    </select>
+                </div>
+                <div class="form-group mb-3 row">
+                    <label for="ViewerId" class="control-label fw-bolder fs-5 col-md-5">Viewer Name</label>
+                    <select name="ViewerId" class="col-md-6">
+
+                        @foreach (ViewerDto ViewerDto in Model.ViewerOptions)
+                        {
+                            if (ViewerDto.ViewerId == Model.Ticket.ViewerId)
+                            {
+                                <option value="@ViewerDto.ViewerId" selected="selected">#@ViewerDto.ViewerId @ViewerDto.FirstName @ViewerDto.LastName</option>
+                            }
+                            else
+                            {
+                                <option value="@ViewerDto.ViewerId">#@ViewerDto.ViewerId @ViewerDto.FirstName @ViewerDto.LastName</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="submit" value="Save" class="btn btn-primary w-100" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }

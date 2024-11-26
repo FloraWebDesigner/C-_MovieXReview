@@ -1,0 +1,60 @@
+﻿@model MovieXReview.Models.ViewModels.TicketNew
+
+@{
+    ViewData["Title"] = "New";
+}
+<div class="container-fluid bg-grey p-3 text-white">
+    <h1 class="text-center">Book a Ticket</h1>
+</div>
+<div class="container-fluid p-3 text-white mb-3">
+    <div class="container row align-items-center">
+        <div class="col-md-6">
+            <a asp-action="List" class="btn btn-primary shadow">Back to Ticket List</a>
+        </div>
+    </div>
+    <div class="row justify-content-center mb-3">
+        <form method="POST" asp-action="Add" class="form col-md-4 bg-black p-md-3 rounded-2 shadow text-white">
+
+            <div class="form-group mb-3">
+                <label for="TicketNo" class="control-label fw-bolder fs-5">Ticket No.</label>
+                <input name="TicketNo" class="form-control" />
+            </div>
+            <div class="form-group mb-3">
+                <label for="MovieId" class="control-label fw-bolder fs-5">Movie Name</label>
+                <select name="MovieId" class="form-control">
+                    <option value="" selected disabled>--Please select--</option>
+                    @foreach (MovieDto MovieDto in Model.AllMovies)
+                    {
+                        <option value="@MovieDto.MovieId">#@MovieDto.MovieId @MovieDto.MovieName </option>
+                    }
+                </select>
+                <p class="fs-6 fst-italic text-danger">Cannot find a movie? Click <a href="/MoviePage/New" class="fw-bolder">here</a> to create a new movie</p>
+            </div>
+            <div class="form-group mb-3">
+                <label for="ViewerId" class="control-label fw-bolder fs-5">Viewer Name</label>
+                <select name="ViewerId" class="form-control">
+                    <option value="" selected disabled>--Please select--</option>
+                    @foreach (ViewerDto ViewerDto in Model.AllViewers)
+                    {
+                        <option value="@ViewerDto.ViewerId">#@ViewerDto.ViewerId @ViewerDto.FirstName @ViewerDto.LastName</option>
+
+                    }
+                </select>
+                <p class="fs-6 fst-italic text-danger">Cannot find a viewer? Click <a href="/ViewerPage/New" class="fw-bolder">here</a> to create a new viewer</p>
+            </div>
+            <div class="form-group pb-3">
+                <input type="submit" value="Book" class="btn btn-warning w-100" />
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
