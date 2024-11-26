@@ -7,8 +7,8 @@
 <div class="container-fluid p-3 text-white">
     <h3 class="text-center">Viewer List</h3>
 </div>
-<div class="container-fluid p-3">
-    <div class="container">
+<div class="container-fluid">
+    <div class="container mx-3">
         <div class="d-flex flex-row justify-content-between mb-3">
             <a asp-action="New" class="btn btn-primary shadow">Create New</a>
             <a href="/TicketPage/List" class="btn btn-primary shadow">Go to Ticket Overview</a>
@@ -57,9 +57,9 @@
                             @Html.DisplayFor(modelItem => item.Age)
                         </td>
                         <td style="width: 15rem;">
-                            <a asp-action="Edit" asp-route-id="@item.ViewerId" class="btn btn-outline-dark w-75 mb-sm-1 py-md-1">Edit</a>
-                            <a asp-action="Details" asp-route-id="@item.ViewerId" class="btn btn-outline-dark w-75 mb-sm-1 py-md-1">Details</a>
-                            <a asp-action="ConfirmDelete" asp-route-id="@item.ViewerId" class="btn btn-outline-dark w-75 py-md-1">Delete</a>
+                            <a asp-action="Details" asp-route-id="@item.ViewerId" class="btn btn-yellow w-75 mb-sm-1 py-md-1">Details</a>
+                            <a asp-action="Edit" asp-route-id="@item.ViewerId" class="btn btn-green w-75 mb-sm-1 py-md-1">Edit</a>
+                            <a asp-action="ConfirmDelete" asp-route-id="@item.ViewerId" class="btn btn-red w-75 py-md-1">Delete</a>
                         </td>
                     </tr>
                 }
