@@ -89,7 +89,7 @@ namespace MovieXReview.Controllers
 
 
         // GET MoviePage/New
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public ActionResult New()
         {
             return View();
@@ -98,7 +98,7 @@ namespace MovieXReview.Controllers
 
         // POST MoviePage/Add
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Add(MovieDto MovieDto, IFormFile MoviePic)
         {
             ServiceResponse response = await _MovieService.AddMovie(MovieDto, MoviePic);
@@ -115,7 +115,7 @@ namespace MovieXReview.Controllers
 
         //GET MoviePage/Edit/{id}
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -131,7 +131,7 @@ namespace MovieXReview.Controllers
 
         //POST MoviePage/Update/{id}
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(int id, MovieDto MovieDto
             //, IFormFile MoviePic
             )
@@ -185,7 +185,7 @@ namespace MovieXReview.Controllers
 
         //GET MoviePage/ConfirmDelete/{id}
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,7 @@ namespace MovieXReview.Controllers.Mvc
         // GET: ImagePage/New
         // Load the form for adding a new image
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public IActionResult New(int movieId)
         {
             ViewData["MovieId"] = movieId;
@@ -44,6 +46,7 @@ namespace MovieXReview.Controllers.Mvc
         // POST: ImagePage/Add
         // Handle the image file upload
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Add(ImagesDto imagesDto, IFormFile ImageFile)
         {
             // Validate file name and also uploaded file, makes sure no empty null stuff are uploaded
@@ -110,6 +113,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ImagePage/ConfirmDelete/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             var imageDto = await _movieImageService.FindImage(id);
@@ -123,6 +127,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ImagePage/Delete/{id}
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var imageDto = await _movieImageService.FindImage(id);
@@ -145,6 +150,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ImagePage/Edit/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(int id)
         {
             var imageDto = await _movieImageService.FindImage(id);
@@ -157,6 +163,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ImagePage/Update/{id}
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(ImagesDto imagesDto, IFormFile ImageFile)
         {
             // Validate the file name and also image upload!

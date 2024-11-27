@@ -97,6 +97,7 @@ namespace MovieXReview.Controllers
         /// </example>
 
         [HttpPost(template: "Add")]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult<TagDto>> AddTag(TagDto tagDto)
         {
             ServiceResponse response = await _tagsService.AddTag(tagDto);
@@ -137,6 +138,7 @@ namespace MovieXReview.Controllers
         /// </example>
         /// 
         [HttpPut(template: "Update/{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateTag(int id, [FromBody] TagDto tagDto)
         {
             // {id} in URL must match TagId in POST Body
@@ -180,6 +182,7 @@ namespace MovieXReview.Controllers
 
 
         [HttpDelete(template: "Delete/{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteTag(int id)
         {
             ServiceResponse response = await _tagsService.DeleteTag(id);

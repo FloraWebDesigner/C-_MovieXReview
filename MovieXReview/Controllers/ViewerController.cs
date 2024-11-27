@@ -97,7 +97,7 @@ namespace MovieXReview.Controllers
         /// Response Code: 204 No Content
         /// </example>
         [HttpPut(template: "Update/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> UpdateViewer(int id, ViewerDto ViewerDto)
         {
 
@@ -144,7 +144,7 @@ namespace MovieXReview.Controllers
         /// Response Headers: Location: api/Viewer/Find/{ViewerId}
         /// </example>
         [HttpPost(template: "Add")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult<Viewer>> AddViewer(ViewerDto ViewerDto)
         {
             ViewerDto.Membership = string.IsNullOrEmpty(ViewerDto.Membership) ? "N" : "Y";
@@ -179,7 +179,7 @@ namespace MovieXReview.Controllers
         /// Response Code: 204 No Content
         /// </example>
         [HttpDelete("Delete/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> DeleteViewer(int id)
         {
             ServiceResponse response = await _ViewerService.DeleteViewer(id);
@@ -297,7 +297,7 @@ namespace MovieXReview.Controllers
         /// -> the viewer with ViewerId = 4 has been removed from the movie
         /// </example>
         [HttpDelete(template: "RemoveForMovie/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> RemoveViewerForMovie(int id)
         {
             ServiceResponse response = await _ViewerService.RemoveViewerForMovie(id);

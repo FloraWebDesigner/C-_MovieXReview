@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieXReview.Data;
 using MovieXReview.Models;
 using MovieXReview.Interface;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MovieXReview.Controllers
 {
@@ -92,6 +93,7 @@ namespace MovieXReview.Controllers
         // PUT: api/Images/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut(template: "Update/{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> PutImages(int id, [FromBody] ImagesDto imagesDto)
         {
             if (id != imagesDto.ImageId)
@@ -138,6 +140,7 @@ namespace MovieXReview.Controllers
         // POST: api/Images
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost(template: "Add")]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult<MovieDto>> AddImage([FromBody] ImagesDto imagesDto)
         {
             var response = await _imagesService.AddImage(imagesDto);
@@ -167,6 +170,7 @@ namespace MovieXReview.Controllers
 
         // DELETE: api/Images/5
         [HttpDelete(template: "Delete/{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteImages(int id)
         {
             var images = await _context.Images.FindAsync(id);
@@ -205,6 +209,7 @@ namespace MovieXReview.Controllers
         /// curl "https://localhost:xx/api/Movie/UploadImageFile/1" -X "PUT" -F ProductPic=@myproductpic.jpg
         /// </example>
         [HttpPut(template: "UploadImageFile/{id}")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UploadImageFile(int id, IFormFile ImageFile)
         {
 

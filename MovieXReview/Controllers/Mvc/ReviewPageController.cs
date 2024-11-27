@@ -44,7 +44,7 @@ namespace MovieXReview.Controllers.Mvc
 
 
         // GET ReviewPage/New
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> New(int id)  // id is movieId
         {
             MovieDto? movieDto = await _movieService.FindMovie(id);
@@ -76,7 +76,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST ReviewPage/Add
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Add(ReviewDto reviewDto)
         {
             ServiceResponse response = await _reviewService.AddReview(reviewDto);
@@ -93,8 +93,9 @@ namespace MovieXReview.Controllers.Mvc
 
 
 
-        // GET: TagPage/Details/{id}
+        // GET: ReviewPage/Details/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Details(int id)
         {
             // Fetch review by ID
@@ -121,8 +122,9 @@ namespace MovieXReview.Controllers.Mvc
 
         }
 
-        //GET ImagePage/ConfirmDelete/{id}
+        //GET ReviewPage/ConfirmDelete/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             var reviewDto = await _reviewService.FindReview(id);
@@ -136,6 +138,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ImagePage/Delete/{id}
         [HttpPost]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Delete(int id)
         {
             var imageDto = await _reviewService.FindReview(id);

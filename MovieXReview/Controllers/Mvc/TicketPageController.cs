@@ -36,7 +36,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET TicketPage/Edit/{id}
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Edit(int id)
         {
             TicketDto? TicketDto = await _TicketService.FindTicket(id);
@@ -61,7 +61,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST TicketPage/Update/{id}
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Update(int id, TicketDto TicketDto)
         {
             ServiceResponse response = await _TicketService.UpdateTicket(TicketDto);
@@ -77,6 +77,7 @@ namespace MovieXReview.Controllers.Mvc
         }
 
         // GET TicketPage/New
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> New()
         {
 
@@ -94,6 +95,7 @@ namespace MovieXReview.Controllers.Mvc
         }
 
         // GET TicketPage/NewFromMovie
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> NewFromMovie(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -118,6 +120,7 @@ namespace MovieXReview.Controllers.Mvc
         }
 
         // GET TicketPage/NewFromViewer
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> NewFromViewer(int id)
         {
 
@@ -144,7 +147,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST TicketPage/Add
         [HttpPost("Add")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Add(TicketDto TicketDto)
         {
             ServiceResponse response = await _TicketService.AddTicket(TicketDto);
@@ -167,10 +170,10 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET: TicketPage/Details/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Details(int id)
         {
             TicketDto? TicketDto = await _TicketService.FindTicket(id);
-
 
             if (TicketDto == null)
             {
@@ -207,7 +210,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET TicketPage/ConfirmDelete/{id}
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             TicketDto? TicketDto = await _TicketService.FindTicket(id);
@@ -223,7 +226,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST TicketPage/Delete/{id}
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Delete(int id)
         {
             ServiceResponse response = await _TicketService.DeleteTicket(id);

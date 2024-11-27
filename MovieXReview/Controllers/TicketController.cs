@@ -88,7 +88,7 @@ namespace MovieXReview.Controllers
         /// 204 No Content
         /// </returns>
         [HttpPut(template: "Update/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> UpdateTicket(int id, TicketDto TicketDto)
         {
             // {id} in URL must match TicketId in POST Body
@@ -129,7 +129,7 @@ namespace MovieXReview.Controllers
         /// 404 Not Found
         /// </returns>
         [HttpPost(template: "Add")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult<Ticket>> AddTicket(TicketDto TicketDto)
         {
             ServiceResponse response = await _TicketService.AddTicket(TicketDto);
@@ -158,7 +158,7 @@ namespace MovieXReview.Controllers
         /// 404 Not Found
         /// </returns>
         [HttpDelete("Delete/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> DeleteTicket(int id)
         {
             ServiceResponse response = await _TicketService.DeleteTicket(id);
@@ -189,7 +189,7 @@ namespace MovieXReview.Controllers
         /// </example>
         //ListTicketsForMovie
         [HttpGet(template: "ListForMovie/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ListTicketsForMovie(int id)
         {
             // empty list of data transfer object TicketDto
@@ -211,6 +211,7 @@ namespace MovieXReview.Controllers
         /// </example>
         //ListTicketsForViewer
         [HttpGet(template: "ListForViewer/{id}")]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> ListTicketsForViewer(int id)
         {
             // empty list of data transfer object TicketDto

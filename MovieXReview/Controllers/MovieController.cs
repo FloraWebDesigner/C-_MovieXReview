@@ -100,7 +100,7 @@ namespace MovieXReview.Controllers
         /// Response Code: 204 No Content
         /// </example>
         [HttpPut(template: "Update/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult> UpdateMovie(int id, MovieDto MovieDto)
         {
             // {id} in URL must match MovieId in POST Body
@@ -148,7 +148,7 @@ namespace MovieXReview.Controllers
         /// Response Headers: Location: api/Movie/Find/{MovieId}
         /// </example>
         [HttpPost(template: "Add")]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult<Movie>> AddMovie(MovieDto MovieDto, IFormFile MoviePic)
         {
             ServiceResponse response = await _MovieService.AddMovie(MovieDto, MoviePic);
@@ -183,7 +183,7 @@ namespace MovieXReview.Controllers
         /// Response Code: 204 No Content
         /// </example>
         [HttpDelete("Delete/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult> DeleteMovie(int id)
         {
             ServiceResponse response = await _MovieService.DeleteMovie(id);
@@ -298,7 +298,7 @@ namespace MovieXReview.Controllers
         /// </example>
         //ListMoviesForViewer
         [HttpGet(template: "ListForViewer/{id}")]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ListMoviesForViewer(int id)
         {
             // empty list of data transfer object ViewerDto
@@ -310,7 +310,6 @@ namespace MovieXReview.Controllers
 
         //ListMoviesForTag
         [HttpGet(template: "ListForTag/{id}")]
-        [Authorize]
         public async Task<IActionResult> ListMoviesForTag(int id)
         {
             // empty list of data transfer object ViewerDto

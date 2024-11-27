@@ -36,6 +36,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET: ViewerPage/Details/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Details(int id)
         {
             ViewerDto? ViewerDto = await _ViewerService.FindViewer(id);
@@ -64,7 +65,7 @@ namespace MovieXReview.Controllers.Mvc
         }
 
         // GET ViewerPage/New
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public ActionResult New()
         {
             return View();
@@ -73,7 +74,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST ViewerPage/Add
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Add(ViewerDto ViewerDto)
         {
             ViewerDto.Membership = string.IsNullOrEmpty(ViewerDto.Membership) ? "N" : "Y";
@@ -91,7 +92,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ViewerPage/Edit/{id}
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Edit(int id)
         {
             ViewerDto? ViewerDto = await _ViewerService.FindViewer(id);
@@ -107,7 +108,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ViewerPage/Update/{id}
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Update(int id, ViewerDto ViewerDto)
         {
             ServiceResponse response = await _ViewerService.UpdateViewer(ViewerDto);
@@ -124,7 +125,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ViewerPage/ConfirmDelete/{id}
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             ViewerDto? ViewerDto = await _ViewerService.FindViewer(id);
@@ -140,7 +141,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ViewerPage/Delete/{id}
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Delete(int id)
         {
             ServiceResponse response = await _ViewerService.DeleteViewer(id);
