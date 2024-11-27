@@ -167,7 +167,8 @@ namespace MovieXReview.Service
                 Rate = review.Rate,
                 CreatedAt = review.CreatedAt,
                 ImageTotal = review.ImageTotal,
-                ViewerId = review.ViewerId
+                ViewerId = review.ViewerId,
+                ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}"
             });
         }
 

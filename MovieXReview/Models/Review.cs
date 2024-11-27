@@ -35,7 +35,8 @@ namespace MovieXReview.Models
         public int MovieId { get; set; } 
         public int ViewerId { get; set; }
 
-        public string ViewerName { get; set; } 
+        public string? ViewerName { get; set; }
+        public string? Identity { get; set; }
 
     }
 

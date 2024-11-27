@@ -1,0 +1,59 @@
+﻿@model MovieXReview.Models.ViewModels.ReviewNew
+
+@{
+    ViewData["Title"] = "New Review";
+}
+
+<div class="container-fluid p-3 text-white">
+    <h1 class="text-center">Add a Review - @Model.MovieDto.MovieName</h1>
+    <div class="container-fluid p-3 text-white">
+        <div class="container align-content-center">
+            <div class="d-flex flex-row justify-content-between pb-5">
+                <a asp-controller="MoviePage" asp-action="Details" asp-route-id="@Model.MovieDto.MovieId" class="btn btn-primary shadow">Back to Movie Details</a>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <form method="POST" asp-action="Add" asp-controller="ReviewPage" class="form col-md-4 p-md-3 rounded-2 shadow">
+                <input type="hidden" name="MovieId" value="@Model.MovieDto.MovieId" />
+                <input type="hidden" name="CreatedAt" value="@DateTime.Now" />
+                <input type="hidden" name="ImageTotal" value="0" />
+
+                <div class="form-group mb-3">
+                    <label for="ViewerId" class="control-label fw-bolder fs-5">Viewer</label>
+                    <select name="ViewerId" class="form-control">
+                        <option value="" disabled selected>-- Please select a viewer --</option>
+                        @foreach (var viewer in Model.AllViewers)
+                        {
+                            <option value="@viewer.ViewerId">@viewer.FirstName @viewer.LastName</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="ReviewTitle" class="control-label fw-bolder fs-5">Review Title</label>
+                    <input name="ReviewTitle" class="form-control" required />
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="ReviewContent" class="control-label fw-bolder fs-5">Review Content</label>
+                    <textarea name="ReviewContent" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="Rate" class="control-label fw-bolder fs-5">Rating (1-10)</label>
+                    <input type="number" name="Rate" class="form-control" min="1" max="10" required />
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit Review" class="btn btn-green w-100" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

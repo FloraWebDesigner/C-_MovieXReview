@@ -5,6 +5,7 @@ using MovieXReview.Models.ViewModels;
 using MovieXReview.Services;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
+using MovieXReview.Service;
 
 namespace MovieXReview.Controllers
 {
@@ -14,14 +15,16 @@ namespace MovieXReview.Controllers
         private readonly ViewerInterface _ViewerService;
         private readonly TicketInterface _TicketService;
         private readonly TagInterface _TagService;
+        private readonly ReviewInterface _ReviewService;
 
         // dependency injection of service interface
-        public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService, TagInterface TagService)
+        public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService, TagInterface TagService, ReviewInterface ReviewService)
         {
             _MovieService = MovieService;
             _ViewerService = ViewerService;
             _TicketService = TicketService;
             _TagService = TagService;
+            _ReviewService = ReviewService;
 
         }
         public IActionResult Index()
@@ -66,6 +69,12 @@ namespace MovieXReview.Controllers
             }
 
 
+            IEnumerable<ReviewDto> MovieReviews = await _ReviewService.ListReviewsForMovie(id);
+            if (AssociatedTags == null)
+            {
+                return View("Error", new ErrorViewModel() { Errors = ["Could not find Reviews"] });
+            }
+
             // information which drives a movie page
             MovieDetails MovieInfo = new MovieDetails()
             {
@@ -73,6 +82,7 @@ namespace MovieXReview.Controllers
                 MovieViewers = AssociatedViewers,
                 MovieTickets = AssociatedTickets,
                 MovieTags = AssociatedTags,
+                MovieReviews = MovieReviews
             };
             return View(MovieInfo);
         }

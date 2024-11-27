@@ -10,6 +10,8 @@ using MovieXReview.Models;
 using MovieXReview.Service;
 using MovieXReview.Interface;
 using MovieXReview.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using MovieXReview.Services;
 
 namespace MovieXReview.Controllers.Mvc
 {
@@ -39,6 +41,57 @@ namespace MovieXReview.Controllers.Mvc
             IEnumerable<ReviewDto> reviewDtos = await _reviewService.ListReviews();
             return View(reviewDtos);
         }
+
+
+        // GET ReviewPage/New
+        [Authorize]
+        public async Task<IActionResult> New(int id)  // id is movieId
+        {
+            MovieDto? movieDto = await _movieService.FindMovie(id);
+
+            if (movieDto == null)
+            {
+                return View("Error", new ErrorViewModel() { Errors = ["Could not find Movie"] });
+            }
+
+            IEnumerable<ViewerDto> viewerDtos = await _viewerService.ListViewers();
+
+            ReviewNew options = new ReviewNew()
+            {
+                AllViewers = viewerDtos,
+                MovieDto = movieDto,
+                Review = new ReviewDto()
+                {
+                    MovieId = id,
+                    CreatedAt = DateTime.Now,
+                    ReviewTitle = "", 
+                    ReviewContent = "",
+                    Rate = 1,
+                    ImageTotal = 0 
+                }
+            };
+
+            return View(options);
+        }
+
+        // POST ReviewPage/Add
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Add(ReviewDto reviewDto)
+        {
+            ServiceResponse response = await _reviewService.AddReview(reviewDto);
+
+            if (response.Status == ServiceResponse.ServiceStatus.Created)
+            {
+                return RedirectToAction("Details", "MoviePage", new { id = reviewDto.MovieId });
+            }
+            else
+            {
+                return View("Error", new ErrorViewModel() { Errors = response.Messages });
+            }
+        }
+
+
 
         // GET: TagPage/Details/{id}
         [HttpGet]

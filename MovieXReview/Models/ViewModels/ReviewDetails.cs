@@ -9,5 +9,8 @@
         // An image may have a movie associated to it
         // ListReviewsForMovie(movieId)
         public MovieDto? Movie { get; set; }
+
+        public IEnumerable<ViewerDto> AllViewers { get; set; }
+
     }
 }
