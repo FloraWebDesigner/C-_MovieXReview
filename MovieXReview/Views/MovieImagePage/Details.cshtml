@@ -1,0 +1,37 @@
+﻿@model MovieXReview.Models.ViewModels.MovieImageDetails
+
+@{
+    ViewData["Title"] = "Image Details";
+}
+
+
+
+@if (Model.Movie != null)
+{
+    <div class="card mb-3 bg-dark text-white">
+        <div class="card-header">
+            <h2>Image Details</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>File Name:</strong> @Model.Image.FileName</p>
+            <p><strong>Uploaded At:</strong> @Model.Image.UploadedAt</p>
+            <p><strong>Movie Name:</strong> @Model.Movie.MovieName</p>
+
+            <!-- If the model image hasPIC, then display the image -->
+            @if (Model.Image.HasPic)
+            {
+                <p><strong>Uploaded Image:</strong></p>
+                <img src="/images/movies/@Model.Movie.MovieId/@Model.Image.ImageId@Model.Image.PicExtension"
+                     alt="Project Image" style="max-width:400px; max-height:300px;" />
+            }
+            else
+            {
+                <p>No image uploaded yet.</p>
+            }
+        </div>
+    </div>
+}
+
+<div class="mt-3">
+    <a asp-action="Details" asp-controller="MoviePage" asp-route-id="@Model.Movie.MovieId" class="btn btn-secondary">Back to Movie Details</a>
+</div>

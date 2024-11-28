@@ -24,7 +24,7 @@ namespace MovieXReview.Service
                 ImageId = img.ImageId,
                 UploadedAt = img.UploadedAt,
                 FileName = img.FileName,
-                MovieId = img.MovieId,
+                MovieId = img.Movie.MovieId,
                 MovieName = img.Movie.MovieName,
             });
         }
@@ -42,7 +42,7 @@ namespace MovieXReview.Service
                 ImageId = img.ImageId,
                 UploadedAt = img.UploadedAt,
                 FileName = img.FileName,
-                MovieId = img.MovieId,
+                MovieId = img.Movie.MovieId,
                 MovieName = img.Movie.MovieName,
                 HasPic = img.HasPic,
                 PicExtension = img.PicExtension
@@ -160,6 +160,8 @@ namespace MovieXReview.Service
                 UploadedAt = img.UploadedAt,
                 FileName = img.FileName,
                 MovieId = img.MovieId,
+                HasPic = img.HasPic,
+                PicExtension = img.PicExtension
             });
         }
 

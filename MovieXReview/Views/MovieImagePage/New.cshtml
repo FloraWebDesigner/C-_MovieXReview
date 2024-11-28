@@ -1,0 +1,41 @@
+﻿@model MovieXReview.Models.ImagesDto
+
+@{
+    ViewData["Title"] = "Add New Image";
+}
+
+<h1>Add New Image</h1>
+
+<h4>Image</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" />
+                <!-- If No image name is inputed error will be displayed -->
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+
+            <!-- Hidden field for MovieId -->
+            <input type="hidden" asp-for="MovieId" />
+
+            <div class="form-group">
+                <label for="ImageFile">Select Image File</label>
+                <input type="file" name="ImageFile" class="form-control" />
+                <!-- I cannot seem to get the error display for the imageupload field working... it's probably because of it being IForm? -->
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Upload Image" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List" class="btn btn-secondary">Back to Images List</a>
+</div>

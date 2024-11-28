@@ -18,16 +18,18 @@ namespace MovieXReview.Controllers
         private readonly TicketInterface _TicketService;
         private readonly TagInterface _TagService;
         private readonly ReviewInterface _ReviewService;
+        private readonly MovieImageInterface _MovieImageService;
         private readonly ApplicationDbContext _context;
 
         // dependency injection of service interface
-        public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService, TagInterface TagService, ReviewInterface ReviewService)
+        public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService, TagInterface TagService, ReviewInterface ReviewService, MovieImageInterface MovieImageService)
         {
             _MovieService = MovieService;
             _ViewerService = ViewerService;
             _TicketService = TicketService;
             _TagService = TagService;
             _ReviewService = ReviewService;
+            _MovieImageService = MovieImageService;
 
         }
         public IActionResult Index()
@@ -36,10 +38,10 @@ namespace MovieXReview.Controllers
         }
 
         // GET: MoviePage/List
-        public async Task<IActionResult> List()
+        public async Task<IActionResult> List(int id)
         {
             IEnumerable<MovieDto> movieDtos = await _MovieService.ListMovies();
-            
+
             return View(movieDtos);
         }
 
@@ -85,6 +87,14 @@ namespace MovieXReview.Controllers
                 return View("Error", new ErrorViewModel() { Errors = ["Could not find Tags"] });
             }
 
+
+            IEnumerable<ImagesDto> AssociatedImages = await _MovieImageService.ListImagesForMovie(id);
+            if (AssociatedImages == null)
+            {
+                return View("Error", new ErrorViewModel() { Errors = ["Could not find Images"] });
+            }
+
+
             // information which drives a movie page
             MovieDetails MovieInfo = new MovieDetails()
             {
@@ -94,6 +104,7 @@ namespace MovieXReview.Controllers
                 MovieTags = AssociatedTags,
                 AllTags = AllTags,
                 MovieReviews = MovieReviews,
+                MovieImages = AssociatedImages
             };
             return View(MovieInfo);
         }

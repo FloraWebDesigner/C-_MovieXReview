@@ -1,0 +1,42 @@
+﻿@model MovieXReview.Models.ImagesDto
+
+@{
+    ViewData["Title"] = "Edit Image";
+}
+
+<h1>Edit Image</h1>
+
+<h4>Update Image Details</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label"></label>
+                <input asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+
+            <!-- Hidden field for ImageID -->
+            <input type="hidden" asp-for="ImageId" />
+
+            <!-- Hidden field for MovieID -->
+            <input type="hidden" asp-for="MovieId" />
+
+            <div class="form-group">
+                <label for="ImageFile">Update Image File</label>
+                <input type="file" name="ImageFile" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Update Image" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Details" asp-controller="MoviePage" asp-route-id="@Model.MovieId" class="btn btn-secondary">Back to Movie</a>
+</div>

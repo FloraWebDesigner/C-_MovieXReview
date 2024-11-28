@@ -1,6 +1,6 @@
 ﻿namespace MovieXReview.Models.ViewModels
 {
-    public class ImageDetails
+    public class MovieImageDetails
     {
         //An Image Page must have an image
         //FindImage(imageID)

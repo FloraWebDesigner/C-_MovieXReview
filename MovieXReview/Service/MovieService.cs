@@ -64,6 +64,7 @@ namespace MovieXReview.Services
                 Images = movie.Images?.Select(image => new ImagesDto
                 {
                     ImageId = image.ImageId,
+                    MovieId = movie.MovieId,
                     FileName = image.FileName,
                     PicExtension = image.PicExtension,
                     HasPic = image.HasPic

@@ -20,9 +20,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\MovieImagePage\" />
-    <Folder Include="wwwroot\images\movies\" />
-  </ItemGroup>
-
 </Project>
