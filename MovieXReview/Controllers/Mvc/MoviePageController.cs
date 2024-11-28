@@ -189,7 +189,6 @@ namespace MovieXReview.Controllers
 
         //GET MoviePage/ConfirmDelete/{id}
         [HttpGet]
-        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -205,7 +204,6 @@ namespace MovieXReview.Controllers
 
         //POST MoviePage/Delete/{id}
         [HttpPost]
-        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             ServiceResponse response = await _MovieService.DeleteMovie(id);

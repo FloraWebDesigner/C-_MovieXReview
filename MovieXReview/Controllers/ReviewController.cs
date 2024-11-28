@@ -86,7 +86,6 @@ namespace MovieXReview.Controllers
         /// Response Headers: Location: api/Review/Find/{ReviewId}
         /// </example>
         [HttpPost("Add")]
-        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult<ReviewDto>> AddReview([FromBody] ReviewDto reviewDto)
         {
             var response = await _reviewService.AddReview(reviewDto);
@@ -121,7 +120,6 @@ namespace MovieXReview.Controllers
         /// -> Response Code: 204 No Content
         /// </example>
         [HttpPut("Update/{id}")]
-        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> UpdateReview(int id, [FromBody] ReviewDto reviewDto)
         {
             if (id != reviewDto.ReviewId)
@@ -156,7 +154,6 @@ namespace MovieXReview.Controllers
         /// -> Response Code: 204 No Content
         /// </example>
         [HttpDelete("Delete/{id}")]
-        [Authorize(Roles = "admin,user")]
         public async Task<ActionResult> DeleteReview(int id)
         {
             var response = await _reviewService.DeleteReview(id);
@@ -212,7 +209,7 @@ namespace MovieXReview.Controllers
         /// GET: api/Review/ListReviewsForViewer/2 -> [{ReviewDto},{ReviewDto},...]
         /// </example>
         [HttpGet("ListReviewsForViewer/{viewerId}")]
-        [Authorize(Roles = "admin,user")]
+
         public async Task<ActionResult<IEnumerable<ReviewDto>>> ListReviewsForViewer(int viewerId)
         {
             var reviews = await _reviewService.ListReviewsForViewer(viewerId);
