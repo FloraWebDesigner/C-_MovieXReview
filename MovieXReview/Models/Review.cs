@@ -32,7 +32,8 @@ namespace MovieXReview.Models
         public int ImageTotal { get; set; }
 
 
-        public int MovieId { get; set; } 
+        public int MovieId { get; set; }
+        public string? MovieName { get; set; }
         public int ViewerId { get; set; }
 
         public string? ViewerName { get; set; }

@@ -11,6 +11,8 @@
             <div class="d-flex flex-row justify-content-between pb-5">
                 <a asp-controller="MoviePage" asp-action="Details" asp-route-id="@Model.MovieId"
                    class="btn btn-primary shadow">Back to Movie Details</a>
+                <a asp-controller="ReviewPage" asp-action="List" asp-route-id="@Model.ReviewId"
+                   class="btn btn-primary shadow">Back to Review List</a>
             </div>
         </div>
         <div class="row justify-content-center">

@@ -37,6 +37,7 @@ namespace MovieXReview.Service
                 ImageTotal = review.ImageTotal,
                 ViewerId = review.ViewerId,
                 MovieId = review.MovieId,
+                MovieName = review.Movie.MovieName,
                 ViewerName = $"{review.Viewer.FirstName} {review.Viewer.LastName}"
             });
         }

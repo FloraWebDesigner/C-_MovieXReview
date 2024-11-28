@@ -7,3 +7,54 @@
 <div class="container-fluid p-3 text-white">
     <h3 class="text-center">Review List</h3>
 </div>
+<table class="table text-white mb-5 align-middle fs-6">
+    <thead>
+        <tr class="text-white text-capitalize">
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReviewContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MovieName)
+            </th>
+            <th>
+                Operation
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReviewTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReviewContent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MovieName)
+                </td>
+                <td style="width: 15rem;">
+                    <a asp-action="Edit" asp-route-id="@item.ReviewId" class="btn btn-green w-75 mb-sm-1 py-md-1">Edit</a>
+                    <a asp-action="ConfirmDelete" asp-route-id="@item.ReviewId" class="btn btn-red w-75 py-md-1">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ 
