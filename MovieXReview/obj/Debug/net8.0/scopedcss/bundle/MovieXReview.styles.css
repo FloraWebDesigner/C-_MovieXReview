@@ -47,3 +47,7 @@ button.accept-policy[b-rzgb33aaxz] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+.bg-custom-dark[b-rzgb33aaxz] {
+    background-color: #1a1a1a;
+}

@@ -17,8 +17,13 @@
         // All images for this movie
         public IEnumerable<ImagesDto>? MovieImages { get; set; }
 
-        // All tags for this movie
+        // A Movie page can have many tags
         public IEnumerable<TagDto>? MovieTags { get; set; }
 
+        // For a list of tags to choose from
+        public IEnumerable<TagDto>? AllTags { get; set; }
+
+        //A Tag page can have many associated Movies
+        public IEnumerable<MovieDto>? AssociatedTags { get; set; }
     }
 }

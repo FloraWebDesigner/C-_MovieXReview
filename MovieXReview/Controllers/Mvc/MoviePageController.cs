@@ -79,6 +79,12 @@ namespace MovieXReview.Controllers
                 return View("Error", new ErrorViewModel() { Errors = ["Could not find Reviews"] });
             }
 
+            IEnumerable<TagDto> AllTags = await _TagService.ListTags();
+            if (AllTags == null)
+            {
+                return View("Error", new ErrorViewModel() { Errors = ["Could not find Tags"] });
+            }
+
             // information which drives a movie page
             MovieDetails MovieInfo = new MovieDetails()
             {
@@ -86,14 +92,14 @@ namespace MovieXReview.Controllers
                 MovieViewers = AssociatedViewers,
                 MovieTickets = AssociatedTickets,
                 MovieTags = AssociatedTags,
-                MovieReviews = MovieReviews
+                AllTags = AllTags,
+                MovieReviews = MovieReviews,
             };
             return View(MovieInfo);
         }
 
 
         // GET MoviePage/New
-        [Authorize(Roles = "admin")]
         public ActionResult New()
         {
             return View();
@@ -102,7 +108,6 @@ namespace MovieXReview.Controllers
 
         // POST MoviePage/Add
         [HttpPost]
-        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Add(MovieDto MovieDto, IFormFile MoviePic)
         {
             ServiceResponse response = await _MovieService.AddMovie(MovieDto, MoviePic);
@@ -119,7 +124,6 @@ namespace MovieXReview.Controllers
 
         //GET MoviePage/Edit/{id}
         [HttpGet]
-        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -135,7 +139,6 @@ namespace MovieXReview.Controllers
 
         //POST MoviePage/Update/{id}
         [HttpPost]
-        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(int id, MovieDto MovieDto
             //, IFormFile MoviePic
             )
@@ -218,7 +221,42 @@ namespace MovieXReview.Controllers
             }
         }
 
-        
+
+        // POST: MoviePage/LinkToTag
+        [HttpPost]
+        public async Task<IActionResult> LinkToTag(int tagId, int movieId)
+        {
+            ServiceResponse response = await _MovieService.LinkTagToMovie(tagId, movieId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound(response.Messages);
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return RedirectToAction("Details", new { id = movieId });
+        }
+
+        // POST: MoviePage/UnlinkFromTag
+        [HttpPost]
+        public async Task<IActionResult> UnlinkFromTag(int tagId, int movieId)
+        {
+            ServiceResponse response = await _MovieService.UnlinkTagFromMovie(tagId, movieId);
+
+            if (response.Status == ServiceResponse.ServiceStatus.NotFound)
+            {
+                return NotFound(response.Messages);
+            }
+            else if (response.Status == ServiceResponse.ServiceStatus.Error)
+            {
+                return StatusCode(500, response.Messages);
+            }
+
+            return RedirectToAction("Details", new { id = movieId });
+        }
     }
 
 

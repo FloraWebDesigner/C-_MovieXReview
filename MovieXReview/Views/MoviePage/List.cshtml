@@ -4,52 +4,67 @@
     ViewData["Title"] = "Movie List";
 }
 
-@* <div class="container-fluid bg-dark p-3 text-white">
-    <h1 class="text-center">Movie List</h1>
-</div> *@
-
 <div class="container-fluid p-3 text-dark">
     <div class="container">
-        <div class="d-flex flex-row justify-content-evenly mb-3">
-            <a asp-action="New" class="btn btn-outline-light shadow">Create New</a>
-            <a href="/ViewerPage/List" class="btn btn-outline-light shadow">Go to Viewer Overview</a>
-            <a href="/TicketPage/List" class="btn btn-outline-light shadow">Go to Booking Overview</a>
+        <!-- Navigation Buttons -->
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center gap-3">
+                        <div class="btn-group">
+                            <a href="/ViewerPage/List" class="btn btn-outline-light">
+                                <i class="fas fa-users me-2"></i>
+                                Viewers
+                            </a>
+                            <a href="/TicketPage/List" class="btn btn-outline-light">
+                                <i class="fas fa-ticket-alt me-2"></i>
+                                Bookings
+                            </a>
+                        </div>
+                        <a asp-action="New" class="btn btn-primary">
+                            <i class="fas fa-plus-circle me-2"></i>
+                            Add New Movie
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-
 
         <!-- Movie Cards Section -->
         <div class="container d-flex flex-column justify-content-between">
             @foreach (var item in Model)
             {
                 <div class="row mb-4">
+                    <!-- Movie Image -->
                     <div class="col-md-4 card h-100 shadow">
-                        <!-- Movie Image -->
                         <img src="@(item.Images != null && item.Images.Any()
-                                     ? $"/images/movies/{item.Images.First().ImageId}.{item.Images.First().PicExtension}"
-                                     : "~/images/placeholder.jpg")"
+                                 ? $"/images/movies/{item.Images.First().ImageId}.{item.Images.First().PicExtension}"
+                                 : "~/images/placeholder.jpg")"
                              class="card-img-top"
                              alt="Movie Poster for @item.MovieName"
                              style="width:100%; height:350px; object-fit:cover;">
                     </div>
-                        <!-- Movie Details -->
+
+                    <!-- Movie Details -->
                     <div class="col-md-8 card-body text-light d-flex flex-column justify-content-between ps-4" style="height:350px;">
-                            <h3 class="card-title">@item.MovieName</h3>
-                            <p class="card-text">
-                                <strong>Year:</strong> @item.Year<br>
-                                <strong>Rate:</strong> @item.Rate / 10<br>
-                                <strong>Directed by </strong> @item.Director<br></p>                      
+                        <!-- Title and Info -->
+                        <div>
+                            <h3 class="card-title mb-2">@item.MovieName</h3>
+                            <div class="d-flex gap-4 mb-3">
+                                <span><strong>Year:</strong> @item.Year</span>
+                                <span><strong>Rating:</strong> @item.Rate/10</span>
+                                <span><strong>Director:</strong> @item.Director</span>
+                            </div>
+                        </div>
 
-                        <!-- Add Tags Section -->
-
+                        <!-- Tags Section -->
                         <div class="tags mt-2">
                             @if (item.Tags != null && item.Tags.Any())
                             {
                                 <ul class="list-inline">
                                     @foreach (var tag in item.Tags)
                                     {
-                                        <li class="list-inline-item" style="background-color: @tag.TagColor; color: white; padding: 5px 10px; border-radius: 20px;">
-                                            @tag.TagName
-                                        </li>
+                                        <li class="list-inline-item" style="background-color: @tag.TagColor; color: white; padding: 5px 10px; border-radius: 20px;"> @tag.TagName</li>
                                     }
                                 </ul>
                             }
@@ -59,26 +74,18 @@
                             }
                         </div>
 
+                        <!-- Movie Description -->
+                        <p class="card-text text-truncate" style="max-height: 4.5rem; overflow: hidden;">
+                            @item.Introduction
+                        </p>
 
-
-
-
-                        <p class="card-text" style="
-                              display: -webkit-box;
-                              -webkit-box-orient: vertical;
-                              overflow: hidden;
-                              -webkit-line-clamp: 3;
-                              text-overflow: ellipsis;">
-                        @item.Introduction</p>
-
-
-                        <!-- Button Section -->
+                        <!-- Action Buttons -->
                         <div class="card-footer text-center d-flex flex-row justify-content-evenly mb-3">
                             <a asp-action="Details" asp-route-id="@item.MovieId" class="btn btn-yellow" style="width:10rem;">View Details</a>
                             <a asp-action="Edit" asp-route-id="@item.MovieId" class="btn btn-green" style="width:10rem;">Edit</a>
                             <a asp-action="ConfirmDelete" asp-route-id="@item.MovieId" class="btn btn-red" style="width:10rem;">Delete</a>
+                        </div>
                     </div>
-                </div>
                 </div>
             }
         </div>

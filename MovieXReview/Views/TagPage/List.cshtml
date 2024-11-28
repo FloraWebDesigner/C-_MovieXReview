@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MovieXReview.Models.TagDto>
+
+@{
+    ViewData["Title"] = "Tags";
+}
+
+<div class="container-fluid p-3 text-white">
+    <h1 class="text-center mb-4">Tags</h1>
+
+    <div class="d-flex justify-content-end mb-4">
+        <a asp-action="New" asp-controller="TagPage" class="btn btn-primary">Create New Tag</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr class="bg-black">
+                    <th>Tag Name</th>
+                    <th>Tag Color</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="align-middle">@item.TagName</td>
+                        <td class="align-middle">
+                            <span class="badge" style="background-color:@item.TagColor">@item.TagColor</span>
+                        </td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a asp-action="Details" asp-route-id="@item.TagId" class="btn btn-info">View Movies</a>
+                                <a asp-action="Edit" asp-route-id="@item.TagId" class="btn btn-warning">Edit</a>
+                                <a asp-action="ConfirmDelete" asp-route-id="@item.TagId" class="btn btn-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

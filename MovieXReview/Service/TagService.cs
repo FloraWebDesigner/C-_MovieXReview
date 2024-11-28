@@ -151,6 +151,7 @@ namespace MovieXReview.Service
             // Map movies to MovieDto
             var tags = movie.Tags.Select(tag => new TagDto
             {
+                TagId = tag.TagId,
                 TagName = tag.TagName,  
                 TagColor = tag.TagColor 
             }).ToList();

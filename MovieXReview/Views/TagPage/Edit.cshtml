@@ -1,0 +1,39 @@
+﻿@model MovieXReview.Models.TagDto
+
+@{
+    ViewData["Title"] = "Edit Tag";
+}
+
+<div class="container-fluid p-3 text-white">
+    <h1 class="text-center mb-4">Edit Tag</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card bg-black text-white">
+                <div class="card-body">
+                    <form asp-action="Update" asp-route-id="@Model.TagId">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="TagId" />
+
+                        <div class="mb-3">
+                            <label asp-for="TagName" class="form-label">Tag Name</label>
+                            <input asp-for="TagName" class="form-control bg-dark text-white" />
+                            <span asp-validation-for="TagName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="TagColor" class="form-label">Tag Color</label>
+                            <input asp-for="TagColor" type="color" class="form-control form-control-color w-100" />
+                            <span asp-validation-for="TagColor" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a asp-action="List" class="btn btn-secondary">Back to List</a>
+                            <button type="submit" class="btn btn-success">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Views\MovieImagePage\" />
-    <Folder Include="Views\TagPage\" />
     <Folder Include="wwwroot\images\movies\" />
   </ItemGroup>
 

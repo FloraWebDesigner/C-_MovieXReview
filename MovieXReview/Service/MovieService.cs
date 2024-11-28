@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.CodeAnalysis;
+using Microsoft.Build.Evaluation;
 
 
 namespace MovieXReview.Services
@@ -32,6 +34,7 @@ namespace MovieXReview.Services
             var movies = await _context.Movies
                 .Include(m => m.Images) // Include related images
                 .Include(m => m.Tickets) // Include related tickets
+                .Include(m => m.Tags) // Include related tags
                 .ToListAsync();
 
             // Map movies to MovieDto
@@ -48,6 +51,14 @@ namespace MovieXReview.Services
                 TicketQuantity = movie.TicketQuantity ?? 0,
                 TicketSold = movie.Tickets?.Count() ?? 0,
                 TicketAvailable = (movie.TicketQuantity ?? 0) - (movie.Tickets?.Count() ?? 0),
+
+                // Map Tags
+                Tags = movie.Tags?.Select(tag => new TagDto
+                {
+                    TagId = tag.TagId,
+                    TagName = tag.TagName,
+                    TagColor = tag.TagColor
+                }).ToList(),
 
                 // Include images when movie is listed
                 Images = movie.Images?.Select(image => new ImagesDto
@@ -315,81 +326,67 @@ namespace MovieXReview.Services
             }
 
 
-        public async Task<ServiceResponse> LinkMovieToTag(int MovieId, int TagId)
+        public async Task<ServiceResponse> LinkTagToMovie(int tagId, int movieId)
         {
             ServiceResponse serviceResponse = new();
 
-            Movie? movie = await _context.Movies
-                .Include(t => t.Tags)
-                .Where(m => m.MovieId == MovieId)
-                .FirstOrDefaultAsync();
-            Tag? tag = await _context.Tags.FindAsync(TagId);
+            Tag? tag = await _context.Tags.Include(t => t.Movies).FirstOrDefaultAsync(t => t.TagId == tagId);
+            Movie? movie = await _context.Movies.FindAsync(movieId);
 
-            // Data must link to a valid entity
-            if (tag == null || movie == null)
+            // Validate entities
+            if (movie == null || tag == null)
             {
                 serviceResponse.Status = ServiceResponse.ServiceStatus.NotFound;
-                if (tag == null)
-                {
-                    serviceResponse.Messages.Add("Tag was not found. ");
-                }
-                if (movie == null)
-                {
-                    serviceResponse.Messages.Add("Movie was not found.");
-                }
+                if (movie == null) serviceResponse.Messages.Add("movie not found.");
+                if (tag == null) serviceResponse.Messages.Add("Tag not found.");
                 return serviceResponse;
             }
+
             try
             {
-                movie.Tags.Add(tag);
-                _context.SaveChanges();
+                tag.Movies.Add(movie); // Add movie to tag
+                await _context.SaveChangesAsync();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                serviceResponse.Messages.Add("There was an issue linking the tag to the movie");
-                serviceResponse.Messages.Add(Ex.Message);
+                serviceResponse.Status = ServiceResponse.ServiceStatus.Error;
+                serviceResponse.Messages.Add("Error linking tag to movie.");
+                serviceResponse.Messages.Add(ex.Message);
+                return serviceResponse;
             }
-
 
             serviceResponse.Status = ServiceResponse.ServiceStatus.Created;
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse> UnlinkMovieFromTag(int MovieId, int TagId)
+        public async Task<ServiceResponse> UnlinkTagFromMovie(int tagId, int movieId)
         {
             ServiceResponse serviceResponse = new();
 
-            Movie? movie = await _context.Movies
-                .Include(t => t.Tags)
-                .Where(m => m.MovieId == MovieId)
-                .FirstOrDefaultAsync();
-            Tag? tag = await _context.Tags.FindAsync(TagId);
+            Tag? tag = await _context.Tags.Include(t => t.Movies).FirstOrDefaultAsync(t => t.TagId == tagId);
+            Movie? movie = await _context.Movies.Include(m => m.Tags).FirstOrDefaultAsync(m => m.MovieId == movieId);
 
-            // Data must link to a valid entity
+            // Validate entities
             if (movie == null || tag == null)
             {
                 serviceResponse.Status = ServiceResponse.ServiceStatus.NotFound;
-                if (movie == null)
-                {
-                    serviceResponse.Messages.Add("Movie was not found. ");
-                }
-                if (tag == null)
-                {
-                    serviceResponse.Messages.Add("Tag was not found.");
-                }
+                if (movie == null) serviceResponse.Messages.Add("Movie not found.");
+                if (tag == null) serviceResponse.Messages.Add("Tag not found.");
                 return serviceResponse;
             }
+
             try
             {
-                movie.Tags.Remove(tag);
-                _context.SaveChanges();
+                tag.Movies.Remove(movie); // Remove project from tag
+                await _context.SaveChangesAsync();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                serviceResponse.Messages.Add("There was an issue unlinking the movie to the tag");
-                serviceResponse.Messages.Add(Ex.Message);
+                serviceResponse.Status = ServiceResponse.ServiceStatus.Error;
+                serviceResponse.Messages.Add("Error unlinking tag from movie.");
+                serviceResponse.Messages.Add(ex.Message);
+                return serviceResponse;
             }
-
 
             serviceResponse.Status = ServiceResponse.ServiceStatus.Deleted;
             return serviceResponse;
