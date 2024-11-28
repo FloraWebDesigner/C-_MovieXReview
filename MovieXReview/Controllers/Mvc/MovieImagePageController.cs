@@ -37,6 +37,7 @@ namespace MovieXReview.Controllers.Mvc
         // GET: ImagePage/New
         // Load the form for adding a new image
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public IActionResult New(int movieId)
         {
             ViewData["MovieId"] = movieId; 
@@ -85,6 +86,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET: ImagePage/Details/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Details(int id)
         {
             // Fetch image by ID
@@ -112,6 +114,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ImagePage/ConfirmDelete/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             var imageDto = await _movieImageService.FindImage(id);
@@ -125,6 +128,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ImagePage/Delete/{id}
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var imageDto = await _movieImageService.FindImage(id);
@@ -147,6 +151,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ImagePage/Edit/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(int id)
         {
             var imageDto = await _movieImageService.FindImage(id);
@@ -159,6 +164,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ImagePage/Update/{id}
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(ImagesDto imagesDto, IFormFile ImageFile)
         {
             // Validate the file name and also image upload!

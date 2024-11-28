@@ -60,7 +60,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET: TagPage/New
         [HttpGet]
-
+        [Authorize(Roles = "admin")]
         public IActionResult New()
         {
             return View();
@@ -69,7 +69,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST: TagPage/Add
         [HttpPost]
- 
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Add(TagDto tagDto)
         {
             if (!ModelState.IsValid)
@@ -91,7 +91,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET TagPage/Edit/{id}
         [HttpGet]
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(int id)
         {
             TagDto? tagDto = await _tagService.FindTag(id);
@@ -107,7 +107,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST TagPage/Update/{id}
         [HttpPost]
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(int id, TagDto tagDto)
         {
             ServiceResponse response = await _tagService.UpdateTag(tagDto);
@@ -124,7 +124,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET: TagPage/ConfirmDelete/{id}
         [HttpGet]
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             var tagDto = await _tagService.FindTag(id);
@@ -138,7 +138,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST: TagPage/Delete/{id}
         [HttpPost, ActionName("Delete")]
-
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var response = await _tagService.DeleteTag(id);

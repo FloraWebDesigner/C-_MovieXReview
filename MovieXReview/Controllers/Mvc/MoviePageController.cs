@@ -119,6 +119,7 @@ namespace MovieXReview.Controllers
 
         // POST MoviePage/Add
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Add(MovieDto MovieDto, IFormFile MoviePic)
         {
             ServiceResponse response = await _MovieService.AddMovie(MovieDto, MoviePic);
@@ -135,6 +136,7 @@ namespace MovieXReview.Controllers
 
         //GET MoviePage/Edit/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Edit(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -150,6 +152,7 @@ namespace MovieXReview.Controllers
 
         //POST MoviePage/Update/{id}
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Update(int id, MovieDto MovieDto
             //, IFormFile MoviePic
             )
@@ -203,6 +206,7 @@ namespace MovieXReview.Controllers
 
         //GET MoviePage/ConfirmDelete/{id}
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -218,6 +222,7 @@ namespace MovieXReview.Controllers
 
         //POST MoviePage/Delete/{id}
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             ServiceResponse response = await _MovieService.DeleteMovie(id);
@@ -235,6 +240,7 @@ namespace MovieXReview.Controllers
 
         // POST: MoviePage/LinkToTag
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> LinkToTag(int tagId, int movieId)
         {
             ServiceResponse response = await _MovieService.LinkTagToMovie(tagId, movieId);
@@ -253,6 +259,7 @@ namespace MovieXReview.Controllers
 
         // POST: MoviePage/UnlinkFromTag
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UnlinkFromTag(int tagId, int movieId)
         {
             ServiceResponse response = await _MovieService.UnlinkTagFromMovie(tagId, movieId);

@@ -1656,3 +1656,4 @@ C:\Users\flora\Source\Repos\C-_MovieXReview v4\MovieXReview\obj\Debug\net8.0\ref
 C:\Users\flora\Source\Repos\C-_MovieXReview v4\MovieXReview\obj\Debug\net8.0\MovieXReview.pdb
 C:\Users\flora\Source\Repos\C-_MovieXReview v4\MovieXReview\obj\Debug\net8.0\MovieXReview.genruntimeconfig.cache
 C:\Users\flora\Source\Repos\C-_MovieXReview v4\MovieXReview\obj\Debug\net8.0\ref\MovieXReview.dll
+C:\Users\flora\Source\Repos\C-_MovieXReview v4\MovieXReview\bin\Debug\net8.0\System.ClientModel.dll

@@ -17,8 +17,16 @@
       "PackagePath": "staticwebassets\\images\\movies\\10.png"
     },
     {
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\1\\2.png",
+      "PackagePath": "staticwebassets\\images\\movies\\1\\2.png"
+    },
+    {
       "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\1\\3.png",
       "PackagePath": "staticwebassets\\images\\movies\\1\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\1\\4.png",
+      "PackagePath": "staticwebassets\\images\\movies\\1\\4.png"
     },
     {
       "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\2.png",
@@ -33,8 +41,24 @@
       "PackagePath": "staticwebassets\\images\\movies\\2\\1.png"
     },
     {
-      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\4.png",
-      "PackagePath": "staticwebassets\\images\\movies\\4.png"
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\2\\3.png",
+      "PackagePath": "staticwebassets\\images\\movies\\2\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\2\\5.png",
+      "PackagePath": "staticwebassets\\images\\movies\\2\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\3\\7.png",
+      "PackagePath": "staticwebassets\\images\\movies\\3\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\4\\4.png",
+      "PackagePath": "staticwebassets\\images\\movies\\4\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\4\\6.png",
+      "PackagePath": "staticwebassets\\images\\movies\\4\\6.png"
     },
     {
       "Id": "C:\\Users\\flora\\Source\\Repos\\C-_MovieXReview v4\\MovieXReview\\wwwroot\\images\\movies\\5.png",

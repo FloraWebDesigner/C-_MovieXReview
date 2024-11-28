@@ -94,7 +94,7 @@ namespace MovieXReview.Controllers.Mvc
         }
 
         // GET TicketPage/NewFromMovie
-        [Authorize(Roles = "admin,user")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> NewFromMovie(int id)
         {
             MovieDto? MovieDto = await _MovieService.FindMovie(id);
@@ -161,9 +161,6 @@ namespace MovieXReview.Controllers.Mvc
             {
                 return View("Error", new ErrorViewModel() { Errors = response.Messages });
             }
-
-
-
         }
 
 

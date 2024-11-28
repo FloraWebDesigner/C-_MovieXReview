@@ -97,7 +97,7 @@ namespace MovieXReview.Controllers
         /// </example>
 
         [HttpPost(template: "Add")]
-
+        [Authorize(Roles = "admin")]
         public async Task<ActionResult<TagDto>> AddTag(TagDto tagDto)
         {
             ServiceResponse response = await _tagsService.AddTag(tagDto);

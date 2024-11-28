@@ -45,6 +45,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET ReviewPage/New
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> New(int id)
         {
             MovieDto? movieDto = await _movieService.FindMovie(id);
@@ -76,6 +77,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // POST ReviewPage/Add
         [HttpPost]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Add(ReviewDto reviewDto)
         {
             ServiceResponse response = await _reviewService.AddReview(reviewDto);
@@ -94,6 +96,7 @@ namespace MovieXReview.Controllers.Mvc
 
         // GET: ReviewPage/Details/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Details(int id)
         {
             // Fetch review by ID
@@ -122,6 +125,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ReviewPage/ConfirmDelete/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> ConfirmDelete(int id)
         {
             var reviewDto = await _reviewService.FindReview(id);
@@ -135,6 +139,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //POST ReviewPage/Delete/{id}
         [HttpPost]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Delete(int id)
         {
             var imageDto = await _reviewService.FindReview(id);
@@ -159,6 +164,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ReviewPage/Edit/{id}
         [HttpGet]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Edit(int id)
         {
             var reviewDto = await _reviewService.FindReview(id);
@@ -172,6 +178,7 @@ namespace MovieXReview.Controllers.Mvc
 
         //GET ReviewPage/Edit/{id}
         [HttpPost]
+        [Authorize(Roles = "admin,user")]
         public async Task<IActionResult> Update(int id, ReviewDto ReviewDto)
         {
             ServiceResponse response = await _reviewService.UpdateReview(ReviewDto);
