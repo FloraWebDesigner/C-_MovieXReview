@@ -6,6 +6,8 @@ using MovieXReview.Services;
 using Microsoft.AspNetCore.Authorization;
 using System.IO;
 using MovieXReview.Service;
+using Microsoft.EntityFrameworkCore;
+using MovieXReview.Data;
 
 namespace MovieXReview.Controllers
 {
@@ -16,6 +18,7 @@ namespace MovieXReview.Controllers
         private readonly TicketInterface _TicketService;
         private readonly TagInterface _TagService;
         private readonly ReviewInterface _ReviewService;
+        private readonly ApplicationDbContext _context;
 
         // dependency injection of service interface
         public MoviePageController(MovieInterface MovieService, ViewerInterface ViewerService, TicketInterface TicketService, TagInterface TagService, ReviewInterface ReviewService)
@@ -35,8 +38,9 @@ namespace MovieXReview.Controllers
         // GET: MoviePage/List
         public async Task<IActionResult> List()
         {
-            IEnumerable<MovieDto?> MovieDtos = await _MovieService.ListMovies();
-            return View(MovieDtos);
+            IEnumerable<MovieDto> movieDtos = await _MovieService.ListMovies();
+            
+            return View(movieDtos);
         }
 
         // GET: MoviePage/Details/{id}
@@ -201,7 +205,7 @@ namespace MovieXReview.Controllers
 
         //POST MoviePage/Delete/{id}
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Delete(int id)
         {
             ServiceResponse response = await _MovieService.DeleteMovie(id);
@@ -215,5 +219,9 @@ namespace MovieXReview.Controllers
                 return View("Error", new ErrorViewModel() { Errors = response.Messages });
             }
         }
+
+        
     }
+
+
 }

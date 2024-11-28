@@ -55,7 +55,6 @@ namespace MovieXReview.Controllers.Mvc
                     ViewerOptions = Viewers
                 };
                 return View(TicketInfo);
-
             }
         }
 

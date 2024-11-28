@@ -4,6 +4,7 @@ using MovieXReview.Data;
 using MovieXReview.Interface;
 using MovieXReview.Service;
 using MovieXReview.Services;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddControllersWithViews();
+    .AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
 
 builder.Services.AddScoped<MovieInterface, MovieService>();
@@ -25,6 +25,7 @@ builder.Services.AddScoped<TagInterface, TagService>();
 builder.Services.AddScoped<MovieImageInterface, MovieImageService>();
 builder.Services.AddScoped<ReviewInterface, ReviewService>();
 
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
