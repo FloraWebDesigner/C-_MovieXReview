@@ -23,5 +23,9 @@ Next step:
 2. Add more navigation buttons on each page to make the direction more smooth
 3. Consider extra features: plugin, pagination...
 
+Team tasks:
+Flora: movie, ticket and viewer entities
+Suzanna: image, review and tag entities
+Combination, navigation, authentication and other features: Flora and Suzanna
 
 ##https://localhost:7256/swagger/index.html
