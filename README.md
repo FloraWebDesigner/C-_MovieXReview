@@ -24,8 +24,8 @@ Next step:
 3. Consider extra features: plugin, pagination...
 
 Team tasks:
-Flora: movie, ticket and viewer entities
-Suzanna: image, review and tag entities
-Combination, navigation, authentication and other features: Flora and Suzanna
+1. Flora: movie, ticket and viewer entities
+2. Suzanna: image, review and tag entities
+3. Flora and Suzanna:  combination, navigation, authentication and other features. 
 
 ##https://localhost:7256/swagger/index.html
