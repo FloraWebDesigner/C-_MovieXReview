@@ -37,13 +37,25 @@ namespace MovieXReview.Controllers
             return RedirectToAction("List");
         }
 
-        // GET: MoviePage/List
-        public async Task<IActionResult> List(int id)
+    // GET: MoviePage/List
+    // Updated this to fit the search functionality
+    // If searchTerm is empty, then list all movies
+    //If searchTerm has sth, then list searchTerm filtered movies! 
+    public async Task<IActionResult> List(string searchTerm)
+    {
+        IEnumerable<MovieDto> movieDtos;
+        
+        if (string.IsNullOrWhiteSpace(searchTerm))
         {
-            IEnumerable<MovieDto> movieDtos = await _MovieService.ListMovies();
-
-            return View(movieDtos);
+            movieDtos = await _MovieService.ListMovies();
         }
+        else
+        {
+            movieDtos = await _MovieService.SearchMovies(searchTerm);
+        }
+
+        return View(movieDtos);
+    }
 
         // GET: MoviePage/Details/{id}
         [HttpGet]

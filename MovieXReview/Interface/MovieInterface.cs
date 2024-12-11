@@ -24,8 +24,7 @@ namespace MovieXReview.Interface
 
         Task<ServiceResponse> UnlinkTagFromMovie(int tagId, int movieId);
 
-        //Task<ServiceResponse> UpdateMovieImg(int id, IFormFile MoviePic);
-
+        Task<IEnumerable<MovieDto>> SearchMovies(string searchTerm);
 
     }
 }

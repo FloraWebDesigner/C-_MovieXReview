@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Microsoft.CodeAnalysis;
 using Microsoft.Build.Evaluation;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace MovieXReview.Services
@@ -393,98 +394,56 @@ namespace MovieXReview.Services
             return serviceResponse;
         }
 
+    //Search movie by name
+    public async Task<IEnumerable<MovieDto>> SearchMovies(string searchTerm)
+{
+    // If search term is null or empty, show all movies in the list 
+    if (string.IsNullOrWhiteSpace(searchTerm))
+        return await ListMovies();
+
+    // EF Like to find searchTerm in movie names
+    var movies = await _context.Movies
+        .Include(m => m.Images)
+        .Include(m => m.Tickets)
+        .Include(m => m.Tags)
+        .Where(m => EF.Functions.Like(m.MovieName, $"%{searchTerm}%"))
+        .ToListAsync();
+
+    // ListMovies
+    var movieDtos = movies.Select(movie => new MovieDto
+    {
+        MovieId = movie.MovieId,
+        MovieName = movie.MovieName ?? "Unknown Title",
+        Year = movie.Year ?? 0,
+        Introduction = movie.Introduction ?? "No Introduction Available",
+        Rate = movie.Rate,
+        Duration = movie.Duration ?? "Unknown Duration",
+        Director = movie.Director ?? "Unknown Director",
+        Star = movie.Star ?? "Unknown Star",
+        TicketQuantity = movie.TicketQuantity ?? 0,
+        TicketSold = movie.Tickets?.Count() ?? 0,
+        TicketAvailable = (movie.TicketQuantity ?? 0) - (movie.Tickets?.Count() ?? 0),
+        Tags = movie.Tags?.Select(tag => new TagDto
+        {
+            TagId = tag.TagId,
+            TagName = tag.TagName,
+            TagColor = tag.TagColor
+        }).ToList(),
+        Images = movie.Images?.Select(image => new ImagesDto
+        {
+            ImageId = image.ImageId,
+            MovieId = movie.MovieId,
+            FileName = image.FileName,
+            PicExtension = image.PicExtension,
+            HasPic = image.HasPic
+        }).ToList()
+    });
+
+    return movieDtos;
+}
 
 
     }
 }
 
-
-
-        //public async Task<ServiceResponse> UpdateMovieImg(int id, IFormFile MoviePic)
-        //{
-        //    Console.WriteLine($"UpdateMovieImg called with id={id}");
-        //    ServiceResponse response = new();
-
-//    Movie? Movie = await _context.Movies.FindAsync(id);
-//    if (Movie == null)
-//    {
-//        response.Status = ServiceResponse.ServiceStatus.NotFound;
-//        response.Messages.Add($"Movie {id} not found");
-//        return response;
-//    }
-
-//    if (MoviePic.Length > 0)
-//    {
-
-
-// remove old picture if exists
-//if (movie.haspic)
-//{
-//    string oldfilename = $"{movie.movieid}{movie.picextension}";
-//    string oldfilepath = path.combine("wwwroot/img/movies/", oldfilename);
-//    if (file.exists(oldfilepath))
-//    {
-//        File.Delete(OldFilePath);
-//    }
-
-//}
-
-
-//establish valid file types (can be changed to other file extensions if desired!)
-//                List<string> Extensions = new List<string> { ".jpeg", ".jpg", ".png", ".gif" };
-//                string MoviePicExtension = Path.GetExtension(MoviePic.FileName).ToLowerInvariant();
-//                if (!Extensions.Contains(MoviePicExtension))
-//                {
-//                    response.Messages.Add($"{MoviePicExtension} is not a valid file extension");
-//                    response.Status = ServiceResponse.ServiceStatus.Error;
-//                    return response;
-//                }
-
-//                string FileName = $"{id}{MoviePicExtension}";
-//                string FilePath = Path.Combine("wwwroot/img/movies/", FileName);
-
-//                using (var targetStream = File.Create(FilePath))
-//                {
-//                    MoviePic.CopyTo(targetStream);
-//                    Console.WriteLine("File has been copied to the target location.");
-//                }
-
-//                // check if file was uploaded
-//                if (File.Exists(FilePath))
-//                {
-//                    Console.WriteLine("File exists at the path after upload.");
-//                    Movie.PicExtension = MoviePicExtension;
-//                    Movie.HasPic = true;
-
-//                    _context.Entry(Movie).State = EntityState.Modified;
-
-//                    try
-//                    {
-//                        // SQL Equivalent: Update Movies set ... where MovieId={id}
-//                        await _context.SaveChangesAsync();
-//                        Console.WriteLine($"Movie updated: HasPic={Movie.HasPic}, PicExtension={Movie.PicExtension}");
-//                    }
-//                    catch (DbUpdateConcurrencyException)
-//                    {
-//                        response.Status = ServiceResponse.ServiceStatus.Error;
-//                        response.Messages.Add("An error occurred updating the record");
-
-//                        return response;
-//                    }
-//                }
-
-//            }
-//            else
-//            {
-//                response.Messages.Add("No File Content");
-//                response.Status = ServiceResponse.ServiceStatus.Error;
-//                return response;
-//            }
-
-//            response.Status = ServiceResponse.ServiceStatus.Updated;
-//            return response;
-//        }
-
-//    }
-//}
 

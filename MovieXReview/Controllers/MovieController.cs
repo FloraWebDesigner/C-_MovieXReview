@@ -330,51 +330,17 @@ namespace MovieXReview.Controllers
             return Ok(tags);
         }
 
-
-
-
         /// <summary>
-        /// Receives a product picture and saves it to /wwwroot/img/movies/{id}{extension}
+        /// Searches for movies by name
         /// </summary>
-        /// <param name="id">The product to update an image for</param>
-        /// <param name="MoviePic">The picture to change to</param>
-        /// <returns>
-        /// 200 OK
-        /// or
-        /// 404 NOT FOUND
-        /// or 
-        /// 500 BAD REQUEST
-        /// </returns>
-        /// <example>
-        /// PUT : api/Movie/UploadMoviePic/2
-        /// HEADERS: Content-Type: Multi-part/form-data, Cookie: .AspNetCore.Identity.Application={token}
-        /// FORM DATA:
-        /// ------boundary
-        /// Content-Disposition: form-data; name="MoviePic"; filename="MovieXReviewpic.jpg"
-        /// Content-Type: image/jpeg
-        /// </example>
-        /// <example>
-        /// curl "https://localhost:xx/api/Product/UploadmoviePic/1" -H "Cookie: .AspNetCore.Identity.Application={token}" -X "PUT" -F MoviePic=@MovieXReviewpic.jpg
-        /// </example>
-        //[HttpPut(template: "UploadMoviePic/{id}")]
-        ////[Authorize]
-        //public async Task<IActionResult> UploadMoviePic(int id, IFormFile MoviePic)
-        //{
-
-        //    ServiceResponse response = await _MovieService.UpdateMovieImg(id, MoviePic);
-
-        //    if (response.Status == ServiceResponse.ServiceStatus.NotFound)
-        //    {
-        //        return NotFound();
-        //    }
-        //    else if (response.Status == ServiceResponse.ServiceStatus.Error)
-        //    {
-        //        return StatusCode(500, response.Messages);
-        //    }
-
-        //    return Ok();
-
-        //}
+        /// <param name="searchTerm">The search term to filter movies by name</param>
+        /// <returns>200 OK with list of movies</returns>
+        [HttpGet("Search")]
+        public async Task<ActionResult<IEnumerable<MovieDto>>> SearchMovies([FromQuery] string searchTerm)
+        {
+            var movies = await _MovieService.SearchMovies(searchTerm);
+            return Ok(movies);
+        }
     }
 }
 
