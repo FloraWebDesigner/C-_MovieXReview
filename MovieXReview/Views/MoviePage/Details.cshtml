@@ -17,7 +17,7 @@
                         var firstImage = Model.MovieImages?.FirstOrDefault();
                         var imagePath = firstImage != null && firstImage.HasPic
                         ? $"/images/movies/{Model.Movie.MovieId}/{firstImage.ImageId}{firstImage.PicExtension}"
-                        : "/images/placeholder.jpg";
+                        : "/images/movies/placeholder.jpg";
                     }
                     <img src="@imagePath"
                          class="card-img-top"

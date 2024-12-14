@@ -8,12 +8,44 @@
     <h3 class="text-center">Viewer List</h3>
 </div>
 <div class="container-fluid">
-    <div class="container mx-3">
-        <div class="d-flex flex-row justify-content-between mb-3">
-            <a asp-action="New" class="btn btn-primary shadow">Create New</a>
-            <a href="/TicketPage/List" class="btn btn-primary shadow">Go to Ticket Overview</a>
-            <a href="/MoviePage/List" class="btn btn-primary shadow">Go to Movie Overview</a>
+    <div class="container mx-3 mb-4">
+
+        <div class="d-flex justify-content-center gap-3">
+            <div class="btn-group">
+                <a href="/MoviePage/List" class="btn btn-outline-light">
+                    <i class="fas fa-users me-2"></i>
+                    Movies
+                </a>
+                <a href="/TicketPage/List" class="btn btn-outline-light">
+                    <i class="fas fa-ticket-alt me-2"></i>
+                    Bookings
+                </a>
+            </div>
+            <a asp-action="New" class="btn btn-primary">
+                <i class="fas fa-plus-circle me-2"></i>
+                Add New Viewer
+            </a>
         </div>
+        </div>
+
+
+        <!-- Search Box -->
+        <div class="container mb-4">
+            <div class="row">
+                <div class="col-12">
+                    <form method="get" class="d-flex justify-content-center">
+                        <div class="input-group" style="max-width: 500px;">
+                            <input type="text" name="searchTerm" class="form-control" placeholder="Search viewers..."
+                                   value="@Context.Request.Query["searchTerm"]">
+                            <button class="btn btn-primary" type="submit">
+                                Search By Viewer Name
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <table class="table text-white mb-5 align-middle fs-6">
             <thead>
                 <tr class="text-white text-capitalize">

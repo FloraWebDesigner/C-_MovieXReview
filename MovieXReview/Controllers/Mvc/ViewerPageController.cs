@@ -28,10 +28,21 @@ namespace MovieXReview.Controllers.Mvc
         }
 
         // GET: ViewerPage/List
-        public async Task<IActionResult> List()
+        public async Task<IActionResult> List(string searchTerm)
         {
-            IEnumerable<ViewerDto?> ViewerDtos = await _ViewerService.ListViewers();
-            return View(ViewerDtos);
+            IEnumerable<ViewerDto> viewerDtos;
+
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                viewerDtos = await _ViewerService.ListViewers();
+            }
+            else
+            {
+                viewerDtos = await _ViewerService.SearchViewers(searchTerm);
+            }
+
+            return View(viewerDtos);
+
         }
 
         // GET: ViewerPage/Details/{id}

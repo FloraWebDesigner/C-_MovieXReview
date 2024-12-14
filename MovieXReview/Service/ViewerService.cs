@@ -222,6 +222,35 @@ namespace MovieXReview.Services
             return response;
         }
 
+        //Search viewer by name
+        public async Task<IEnumerable<ViewerDto>> SearchViewers(string searchTerm)
+        {
+            // If search term is null or empty, show all movies in the list 
+            if (string.IsNullOrWhiteSpace(searchTerm))
+                return await ListViewers();
+
+            // EF Like to find searchTerm in viewer names
+var viewers = await _context.Viewers
+    .Where(v => EF.Functions.Like(v.FirstName, $"%{searchTerm}%") || 
+                EF.Functions.Like(v.LastName, $"%{searchTerm}%"))
+    .ToListAsync();
+
+
+            // ListViewers
+            var viewerDtos = viewers.Select(viewer => new ViewerDto
+            {
+                ViewerId = viewer.ViewerId,
+                FirstName = viewer.FirstName ?? "Unknown First Name",
+                LastName = viewer.LastName ?? "Unknown Last Name",
+                Identity = viewer.Identity ?? "General Audience",
+                Membership = viewer.Membership ?? "N",
+                Age = (int)viewer.Age
+               
+            });
+
+            return viewerDtos;
+        }
+
     }
 
 }

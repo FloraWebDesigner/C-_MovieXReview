@@ -58,7 +58,7 @@
                             var firstImage = item.Images?.FirstOrDefault();
                             var imagePath = firstImage != null && firstImage.HasPic
                             ? $"/images/movies/{item.MovieId}/{firstImage.ImageId}{firstImage.PicExtension}"
-                            : "/images/placeholder.jpg";
+                            : "/images/movies/placeholder.jpg";
                         }
                         <img src="@imagePath"
                              class="card-img-top"

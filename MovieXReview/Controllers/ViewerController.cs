@@ -10,6 +10,7 @@ using MovieXReview.Models;
 using MovieXReview.Service;
 using MovieXReview.Interface;
 using Microsoft.AspNetCore.Authorization;
+using MovieXReview.Services;
 
 
 namespace MovieXReview.Controllers
@@ -312,6 +313,18 @@ namespace MovieXReview.Controllers
             }
 
             return NoContent();
+        }
+
+        /// <summary>
+        /// Searches for viewers by name
+        /// </summary>
+        /// <param name="searchTerm">The search term to filter viewers by name</param>
+        /// <returns>200 OK with list of viewers</returns>
+        [HttpGet("Search")]
+        public async Task<ActionResult<IEnumerable<MovieDto>>> SearchViewers([FromQuery] string searchTerm)
+        {
+            var viewers = await _ViewerService.SearchViewers(searchTerm);
+            return Ok(viewers);
         }
 
     }
