@@ -19,6 +19,8 @@ namespace MovieXReview.Interface
         Task<ServiceResponse> RemoveViewerForMovie(int id);
 
         Task<IEnumerable<ViewerDto>> SearchViewers(string searchTerm);
+
+       // Task<ViewerDto?> Profile();
     }
 }
 

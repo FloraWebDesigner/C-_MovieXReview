@@ -222,8 +222,10 @@ namespace MovieXReview.Services
             return response;
         }
 
-        //Search viewer by name
-        public async Task<IEnumerable<ViewerDto>> SearchViewers(string searchTerm)
+
+
+//Search viewer by name
+public async Task<IEnumerable<ViewerDto>> SearchViewers(string searchTerm)
         {
             // If search term is null or empty, show all movies in the list 
             if (string.IsNullOrWhiteSpace(searchTerm))

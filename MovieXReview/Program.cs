@@ -1,3 +1,4 @@
+using CoreEntityFramework.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MovieXReview.Data;
@@ -24,6 +25,7 @@ builder.Services.AddScoped<ViewerInterface, ViewerService>();
 builder.Services.AddScoped<TagInterface, TagService>();
 builder.Services.AddScoped<MovieImageInterface, MovieImageService>();
 builder.Services.AddScoped<ReviewInterface, ReviewService>();
+
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();

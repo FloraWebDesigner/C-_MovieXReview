@@ -2,6 +2,7 @@
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using MovieXReview.Models;
+using System;
 using System.Reflection;
 
 namespace MovieXReview.Data
@@ -37,5 +38,7 @@ namespace MovieXReview.Data
             .HasMany(p => p.Tags)
             .WithMany(t => t.Movies);
         }
+
+
     }
 }

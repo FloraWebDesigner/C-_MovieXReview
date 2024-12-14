@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 namespace MovieXReview.Models
 {
     public class Review
@@ -19,6 +20,7 @@ namespace MovieXReview.Models
 
         // A review belongs to a viewer
         public virtual Viewer Viewer { get; set; }
+        //public IdentityUser Viewer { get; set; }
         public int ViewerId { get; set; }
     }
 

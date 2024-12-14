@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace MovieXReview.Models
 {
@@ -13,6 +14,7 @@ namespace MovieXReview.Models
 
         //Each ticket belongs to one viewer
         public virtual Viewer Viewer { get; set; }
+        // public IdentityUser Viewer { get; set; }
     }
 
     public class TicketDto
